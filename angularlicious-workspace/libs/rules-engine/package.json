@@ -1,6 +1,6 @@
 {
   "name": "@angularlicious/rules-engine",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "A serious rule engine for Javascript applications. Perfect for Angular applications. Build something amazing!",
   "license": "MIT",
   "ngPackage": {

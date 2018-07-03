@@ -1,0 +1,40 @@
+{
+  "name": "@angularlicious/foundation",
+  "version": "6.0.1",
+  "description": "An Angular custom library that contains foundation elements for Angularlicious applications.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "keywords": [
+    "angularlicious",
+    "Angular",
+    "@angularlicious",
+    "Angularlicio.us",
+    "Matt Vaughn"
+  ],
+  "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/http": "^6.0.7",
+    "@angularlicious/logging": "^6.0.0",
+    "@angularlicious/actions": "^6.0.0",
+    "@angularlicious/rules-engine": "^6.0.0",
+    "rxjs": "^6.2.1"
+  },
+  "main": "bundles/angularlicious-foundation.umd.js",
+  "module": "fesm5/angularlicious-foundation.js",
+  "es2015": "fesm2015/angularlicious-foundation.js",
+  "esm5": "esm5/angularlicious-foundation.js",
+  "esm2015": "esm2015/angularlicious-foundation.js",
+  "fesm5": "fesm5/angularlicious-foundation.js",
+  "fesm2015": "fesm2015/angularlicious-foundation.js",
+  "typings": "angularlicious-foundation.d.ts",
+  "metadata": "angularlicious-foundation.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

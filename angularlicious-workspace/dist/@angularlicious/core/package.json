@@ -1,0 +1,39 @@
+{
+  "name": "@angularlicious/core",
+  "version": "6.0.1",
+  "description": "An Angular custom library that contains core application items for Angularlicious Angular applications.",
+  "keywords": [
+    "Angular",
+    "Build Motion",
+    "Matt Vaughn",
+    "angularlicious",
+    "@angularlicious",
+    "#Angularlicious"
+  ],
+  "author": "Matt Vaughn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "peerDependencies": {
+    "@angular/http": "^6.0.7",
+    "@angular/router": "^6.0.7",
+    "@types/google.analytics": "0.0.36",
+    "@angularlicious/actions": "^6.0.0",
+    "@angularlicious/rule-engine": "^6.0.0"
+  },
+  "main": "bundles/angularlicious-core.umd.js",
+  "module": "fesm5/angularlicious-core.js",
+  "es2015": "fesm2015/angularlicious-core.js",
+  "esm5": "esm5/angularlicious-core.js",
+  "esm2015": "esm2015/angularlicious-core.js",
+  "fesm5": "fesm5/angularlicious-core.js",
+  "fesm2015": "fesm2015/angularlicious-core.js",
+  "typings": "angularlicious-core.d.ts",
+  "metadata": "angularlicious-core.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

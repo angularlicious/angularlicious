@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+export { AngularliciousLoggingModule } from './src/logging.module';
+export { AngularliciousLoggingService } from './src/logging.service';
+export { loggingServiceConfig } from './src/logging.service.config';
+export { Severity } from './src/severity.enum';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AYW5ndWxhcmxpY2lvdXMvbG9nZ2luZy8iLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsMkJBQTJCLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQztBQUNuRSxPQUFPLEVBQUUsNEJBQTRCLEVBQUUsTUFBTSx1QkFBdUIsQ0FBQztBQUNyRSxPQUFPLEVBQUUsb0JBQW9CLEVBQUUsTUFBTSw4QkFBOEIsQ0FBQztBQUNwRSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0scUJBQXFCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBBbmd1bGFybGljaW91c0xvZ2dpbmdNb2R1bGUgfSBmcm9tICcuL3NyYy9sb2dnaW5nLm1vZHVsZSc7XHJcbmV4cG9ydCB7IEFuZ3VsYXJsaWNpb3VzTG9nZ2luZ1NlcnZpY2UgfSBmcm9tICcuL3NyYy9sb2dnaW5nLnNlcnZpY2UnO1xyXG5leHBvcnQgeyBsb2dnaW5nU2VydmljZUNvbmZpZyB9IGZyb20gJy4vc3JjL2xvZ2dpbmcuc2VydmljZS5jb25maWcnO1xyXG5leHBvcnQgeyBTZXZlcml0eSB9IGZyb20gJy4vc3JjL3NldmVyaXR5LmVudW0nO1xyXG4iXX0=

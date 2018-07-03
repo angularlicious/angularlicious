@@ -1,0 +1,40 @@
+{
+  "name": "@angularlicious/rules-engine",
+  "version": "6.0.1",
+  "description": "A serious rule engine for Javascript applications. Perfect for Angular applications. Build something amazing!",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "typescript",
+    "typescript rules engine",
+    "validation",
+    "rules engine",
+    "business rules",
+    "angularlicious",
+    "@angularlicious",
+    "Matt Vaughn",
+    "Angularlicious.com",
+    "Angularlicio.us"
+  ],
+  "author": "Matt Vaughn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "peerDependencies": {
+    "typescript-dotnet-commonjs": "~4.10.0"
+  },
+  "main": "bundles/angularlicious-rules-engine.umd.js",
+  "module": "fesm5/angularlicious-rules-engine.js",
+  "es2015": "fesm2015/angularlicious-rules-engine.js",
+  "esm5": "esm5/angularlicious-rules-engine.js",
+  "esm2015": "esm2015/angularlicious-rules-engine.js",
+  "fesm5": "fesm5/angularlicious-rules-engine.js",
+  "fesm2015": "fesm2015/angularlicious-rules-engine.js",
+  "typings": "angularlicious-rules-engine.d.ts",
+  "metadata": "angularlicious-rules-engine.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@angularlicious/logging",
+  "version": "6.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "keywords": [
+    "angularlicious",
+    "@angularlicious",
+    "Angular",
+    "Angularlicio.us",
+    "Matt Vaughn",
+    "logging"
+  ],
+  "author": "matt@angularlicious.com www.angularlicio.us",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7"
+  },
+  "main": "bundles/angularlicious-logging.umd.js",
+  "module": "fesm5/angularlicious-logging.js",
+  "es2015": "fesm2015/angularlicious-logging.js",
+  "esm5": "esm5/angularlicious-logging.js",
+  "esm2015": "esm2015/angularlicious-logging.js",
+  "fesm5": "fesm5/angularlicious-logging.js",
+  "fesm2015": "fesm2015/angularlicious-logging.js",
+  "typings": "angularlicious-logging.d.ts",
+  "metadata": "angularlicious-logging.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

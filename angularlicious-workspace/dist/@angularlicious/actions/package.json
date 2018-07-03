@@ -1,0 +1,40 @@
+{
+  "name": "@angularlicious/actions",
+  "version": "6.0.1",
+  "description": "@angularlicious/actions is a framework to build amazing business logic. It compliments the @angularlicious/rules-engine.",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "typescript",
+    "business logic",
+    "business actions",
+    "business rules",
+    "angularlicious",
+    "validation",
+    "javascript rules",
+    "Matt Vaughn",
+    "Angularlicious.com",
+    "Angularlicious"
+  ],
+  "author": "Matt Vaughn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "peerDependencies": {
+    "@angularlicious/rules-engine": "^6.0.0"
+  },
+  "main": "bundles/angularlicious-actions.umd.js",
+  "module": "fesm5/angularlicious-actions.js",
+  "es2015": "fesm2015/angularlicious-actions.js",
+  "esm5": "esm5/angularlicious-actions.js",
+  "esm2015": "esm2015/angularlicious-actions.js",
+  "fesm5": "fesm5/angularlicious-actions.js",
+  "fesm2015": "fesm2015/angularlicious-actions.js",
+  "typings": "angularlicious-actions.d.ts",
+  "metadata": "angularlicious-actions.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "@angularlicious/core",
   "version": "6.0.0",
-  "description": "An Angular custom module that contains core application items for Angularlicious Angular applications. It relies on the angularlicious/foundation package.",
+  "description": "An Angular custom library that contains core application items for Angularlicious Angular applications.",
   "ngPackage": {
     "lib": {
       "entryFile": "./index.ts",
@@ -31,7 +31,7 @@
     "@angular/http": "^6.0.7",
     "@angular/router": "^6.0.7",
     "@types/google.analytics": "0.0.36",
-    "angularlicious/actions": "^6.0.0",
+    "@angularlicious/actions": "^6.0.0",
     "@angularlicious/rule-engine": "^6.0.0"
   }
 }

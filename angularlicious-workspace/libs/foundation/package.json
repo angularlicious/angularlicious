@@ -1,7 +1,7 @@
 {
     "name": "@angularlicious/foundation",
-    "version": "5.0.1",
-    "description": "An Angular custom module that contains foundation elements for angularlicious Angular applications. Basically, the framework for angularlicious NG.",
+    "version": "6.0.0",
+    "description": "An Angular custom library that contains foundation elements for Angularlicious applications.",
     "ngPackage": {
         "lib": {
             "entryFile": "./index.ts",
