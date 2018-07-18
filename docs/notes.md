@@ -27,6 +27,7 @@ We will create a workspace using nrwl.io Nx extensions with the primary goal of 
 ```
 create-nx-workspace <YOUR-WORKSPACE-NAME> --npm-scope=<YOUR-SCOPE-NAME>
 create-nx-workspace angularlicious-workspace --npm-scope=angularlicious
+ng new angular-custom-libraries --collection=@nrwl/schematics
 ```
 
 Notice, that the command includes the ` --npm-scope ` flag. This will configure the workspace to use the @scope identifier as a global reference to your libraries. It is also a good mechanism to organize libraries that are related and/or published by the same organization. Even a single person, can be an organization when it comes to organizing your libraries for publication. 
