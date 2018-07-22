@@ -18,10 +18,6 @@ schematics
 npm install
 ```
 
-Verify your installation of the packages:
-
-```ts
-// ADD OUTPUT HERE
 ```
 schematics [CollectionName:]SchematicName [options, ...]
 
