@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
  * members of the imported module (i.e., PageLayoutModule contains a CardComponent).
  */
 // import { AngularliciousSecurityModule, AngularliciousSecurityService } from '@angularlicious/security';
-import { SiteModule } from './../site/site.module';
+import { SiteModule } from '../site/site.module';
 import { MarkdownEditorModule } from '@angularlicious/markdown-editor';
 import { MarkdownEditorOptions } from '@angularlicious/markdown-editor';
-import { BlogModule } from './../blog/blog.module';
+import { BlogModule } from '../blog/blog.module';
 
 /** SERVICES:
  * Import the [service] and add to the [providers] list. This will make the specified

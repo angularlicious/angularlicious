@@ -11,7 +11,7 @@ import { Severity } from '@angularlicious/logging';
 import { SecurityActionBase } from './security-action-base.action';
 
 // import action specific items:
-import { ConfirmationToken } from './../../models/confirmation-token.model';
+import { ConfirmationToken } from '../../models/confirmation-token.model';
 
 export class ConfirmUserAccountAction extends SecurityActionBase {
   

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlaylistComponent } from './playlist/playlist.component';
 
-import { SiteModule } from './../site/site.module';
-import { SharedModule } from './../shared/shared.module';
+import { SiteModule } from '../site/site.module';
+import { SharedModule } from '../shared/shared.module';
 import { SetupComponent } from './setup/setup.component';
 import { PodcastProvidersComponent } from './podcast-providers/podcast-providers.component';
 

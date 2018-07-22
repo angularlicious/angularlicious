@@ -17,9 +17,9 @@ import { BehaviorSubject } from 'rxjs';
 import { AngularliciousLoggingService, Severity } from '@angularlicious/logging';
 
 import { HttpBaseService, HttpRequestMethod } from '@angularlicious/foundation';
-import { Credentials } from './../models/credentials.model';
-import { UserAccount } from './../models/user-account.model';
-import { ConfirmationToken } from './../models/confirmation-token.model';
+import { Credentials } from '../models/credentials.model';
+import { UserAccount } from '../models/user-account.model';
+import { ConfirmationToken } from '../models/confirmation-token.model';
 import { Subscriber } from '@angularlicious/security';
 import { ServiceResponse } from '@angularlicious/foundation';
 import { HttpClient } from '@angular/common/http';
