@@ -18,7 +18,7 @@ schematics
 npm install
 ```
 
-```
+```ts
 schematics [CollectionName:]SchematicName [options, ...]
 
 By default, if the collection name is not specified, use the internal collection provided
