@@ -4,7 +4,7 @@ import { ActionResult } from '@angularlicious/actions';
 
 import { SecurityActionBase } from './security-action-base.action';
 import { Severity } from '@angularlicious/logging';
-import { Credentials } from './../../../security/models/credentials.model';
+import { Credentials } from '../../models/credentials.model';
 
 /**
  * Use this action to validate the user's credentials.

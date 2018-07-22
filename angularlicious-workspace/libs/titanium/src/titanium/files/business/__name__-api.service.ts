@@ -12,7 +12,7 @@ import {
   AngularliciousLoggingService,
   Severity
 } from '@angularlicious/logging';
-import { Subscriber } from '../models/subscriber.model';
+import { Subscriber } from './../models/subscriber.model';
 import { HttpRequestMethod } from '@angularlicious/foundation';
 
 @Injectable()

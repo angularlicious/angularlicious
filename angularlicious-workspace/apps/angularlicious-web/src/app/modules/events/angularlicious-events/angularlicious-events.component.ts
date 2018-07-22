@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Event } from './../models/event.model';
+import { Event } from '../models/event.model';
 @Component({
   selector: 'app-angularlicious-events',
   templateUrl: './angularlicious-events.component.html',
