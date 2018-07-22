@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RandomBackGroundStyle } from './../random-background-style';
+import { RandomBackGroundStyle } from '../random-background-style';
 
 @Component({
   selector: 'app-landing-intro',

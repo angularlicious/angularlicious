@@ -12,7 +12,7 @@ import {
 } from '@angularlicious/foundation';
 import { Severity } from '@angularlicious/logging';
 
-import { Subscriber } from '../../models/subscriber.model';
+import { Subscriber } from './../../models/subscriber.model';
 import { SecurityActionBase } from './security-action-base.action';
 import { HttpResponse } from '@angular/common/http';
 

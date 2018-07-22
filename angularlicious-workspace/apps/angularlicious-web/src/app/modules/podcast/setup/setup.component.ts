@@ -7,9 +7,9 @@ import { AngularliciousLoggingService, Severity } from '@angularlicious/logging'
 /**
  * Import Analytic Constants;
  */
-import { AnalyticCategories } from './../../../models/analytics-categories.model';
-import { AnalyticActions } from './../../../models/analytics-actions.model';
-import { AnalyticLabels } from './../../../models/analytics-labels.model';
+import { AnalyticCategories } from '../../../models/analytics-categories.model';
+import { AnalyticActions } from '../../../models/analytics-actions.model';
+import { AnalyticLabels } from '../../../models/analytics-labels.model';
 
 import { AmazonItem } from './amazon-item';
 import { HttpClient } from '@angular/common/http';

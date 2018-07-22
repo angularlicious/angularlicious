@@ -4,9 +4,9 @@ import { AngularliciousLoggingService, Severity } from '@angularlicious/logging'
 
 import { SecurityHttpService } from './security-http.service';
 import { BusinessProviderBase } from '@angularlicious/foundation';
-import { UserAccount } from './../models/user-account.model';
-import { ConfirmationToken } from './../models/confirmation-token.model';
-import { Credentials } from './../models/credentials.model';
+import { UserAccount } from '../models/user-account.model';
+import { ConfirmationToken } from '../models/confirmation-token.model';
+import { Credentials } from '../models/credentials.model';
 
 import { CreateUserAccountAction } from './actions/create-user-account.action';
 import { RegisterSubscriberAction } from './actions/register-subscriber.action';
