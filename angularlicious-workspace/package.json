@@ -8,7 +8,7 @@
     "build": "ng build",
     "build:web": "ng build --project=angularlicious-web --prod && npm run publish:web",
     "build:debug": "ng build --project=angularlicious-web",
-    "publish:web": "npm run clean:web && sync-glob -d false 'dist/angularlicious-web/**' ../../angularlicio.us/source/BuildMotion.Angularlicious.solution/BuildMotion.Angularlicious.WebHost",
+    "publish:web": "npm run clean:web && sync-glob -d false 'dist/apps/angularlicious-web/**' ../../angularlicio.us/source/BuildMotion.Angularlicious.solution/BuildMotion.Angularlicious.WebHost",
     "clean:web": "npm run clean1:web && npm run clean2:web && npm run clean3:web && npm run clean4:web && npm run clean5:web && npm run clean6:web",
     "clean1:web": "del-cli -f ./../../angularlicio.us/source/BuildMotion.Angularlicious.solution/BuildMotion.Angularlicious.WebHost/*.js.map",
     "clean2:web": "del-cli -f ./../../angularlicio.us/source/BuildMotion.Angularlicious.solution/BuildMotion.Angularlicious.WebHost/*.bundle.js",
