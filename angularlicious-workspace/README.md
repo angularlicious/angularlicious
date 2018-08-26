@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
+Use the libraries to provide infrastructure elements for your Angular application.
+
 ## Nrwl Extensions for Angular (Nx)
 
 <a href="https://nrwl.io/nx"><img src="https://preview.ibb.co/mW6sdw/nx_logo.png"></a>
