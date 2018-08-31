@@ -397,30 +397,29 @@
         }
       }
     },
-    "test-lib": {
-      "root": "libs/test-lib",
-      "sourceRoot": "libs/test-lib/src",
+    "titanium": {
+      "root": "libs/titanium",
+      "sourceRoot": "libs/titanium/src",
       "projectType": "library",
-      "prefix": "angularlicious",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/test-lib/tsconfig.lib.json",
-            "project": "libs/test-lib/ng-package.json"
+            "tsConfig": "libs/titanium/tsconfig.json",
+            "project": "libs/titanium/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "libs/test-lib/ng-package.prod.json"
+              "project": "libs/titanium/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/test-lib/src/test.ts",
-            "tsConfig": "libs/test-lib/tsconfig.spec.json",
-            "karmaConfig": "libs/test-lib/karma.conf.js"
+            "main": "libs/titanium/src/test.ts",
+            "tsConfig": "libs/titanium/tsconfig.spec.json",
+            "karmaConfig": "libs/titanium/karma.conf.js"
           }
         },
         "lint": {

@@ -1,0 +1,59 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+  <app-landing-intro>
+    <h1 title>Custom Angular Modules</h1>
+  </app-landing-intro>
+  <div class="main">
+    <app-two-column-content>
+      <h2 title>Free Guide :: Custom Angular Modules</h2>
+      <div body>
+        <p>
+          I want to share my knowledge of building enterprise applications using great tools, principles, and process. Please use this
+          guide to get a quick start on building Angular modules. Whether your an experienced or new Angular developer, it
+          should be your goal to know:
+        </p>
+        <ul>
+          <li>Why modules are important in your application architecture and design.</li>
+          <li>How to create custom modules that can be developed as their own Angular libraries.</li>
+          <li>How to use your custom modules in other Angular applications.</li>
+          <li>How to create different types of modules that take care of application concerns, like:
+            <ul>
+              <li>Core and shared elements of your application.</li>
+              <li>UI and Application components.</li>
+              <li>Infrastructure Services (i.e., Logging, Http, Security).
+              </li>
+              <li>
+                Domain Feature Services that are specific to the solution.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div *ngIf="showSubscribeForm">
+          <!-- ADD BUILDMOTION SUBSCRIBE FORM HERE -->
+          <bm-register-subscriber (subscribe)="handleSubscribe($event)"></bm-register-subscriber>
+        </div>
+        <button *ngIf="showDownloadButton" (click)="downloadBook()" class="btn btn-info mb-1">DOWNLOAD
+          <i class="fa fa-cloud-download"></i>
+        </button>
+
+        <!-- <app-modal-large>
+          <div button-text>GET YOUR GUIDE NOW</div>
+          <h4 title class="title title-up">Subscribe for Guide</h4>
+          <p body>
+              Please subscribe for the free guide.
+          </p>
+          <div button-submit-text>Submit</div>
+        </app-modal-large> -->
+        <!-- <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+                  GET YOUR GUIDE
+              </button> -->
+              <!-- SUBSCRIBE SIGN-UP FORM FROM [BUILD MOTION SECURITY MODULE]-->
+      </div>
+      <img body2 src="../assets/img/custom-angular-modules-book-cover.png" />
+    </app-two-column-content>
+
+    <!-- <app-sign-up></app-sign-up> -->
+
+  </div>
+  <app-footer></app-footer>
+</div>

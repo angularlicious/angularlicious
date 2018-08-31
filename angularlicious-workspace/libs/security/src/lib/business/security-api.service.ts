@@ -1,9 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-// import 'rxjs/add/operator/map';
-// import 'rxjs/add/operator/catch';
-// import 'rxjs/add/operator/observeOn';
-// import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 
@@ -12,7 +8,7 @@ import {
   AngularliciousLoggingService,
   Severity
 } from '@angularlicious/logging';
-import { Subscriber } from './../models/subscriber.model';
+import { Subscriber } from '../models/subscriber.model';
 import { HttpRequestMethod } from '@angularlicious/foundation';
 
 @Injectable()
@@ -32,12 +28,12 @@ export class SecurityApiService extends HttpBaseService {
 
     const body = JSON.stringify(subscriber);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.POST,
+      HttpRequestMethod.post,
       this.httpService.createHeader(false),
       requestUrl,
       body
     );
-    return this.httpService.get(options);
+    return this.httpService.post(options);
 
     /**TEMPORARY IMPLEMENTATION */
     // const response = new ServiceResponse();

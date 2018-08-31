@@ -1,0 +1,184 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+    <app-intro></app-intro>
+    <div class="main">
+
+        <!-- SITE INTRODUCTION(S); -->
+        <!-- <app-article>
+            <h1 title>Welcome!!</h1>
+            <h3 body>Good to have you here. Now that you are here, please help yourself to some Angularlicious.
+            </h3>
+            <h1 body>StackBlitz</h1>
+            <p body>Last month, I went on a short vacation to San Jose, California. It started out as a pleasure trip - however,
+                I learned that StackBlitz was having a release party for the Angular.io documentation integration. Also,
+                there was an announcement about the new SDK that allows you to embed StackBlitz. The people and demos were
+                amazing. I met a few members of the Angular Core team - they were just hanging out.
+            </p>
+
+            <iframe body src="https://stackblitz.com/github/buildmotion/buildmotion-modal/tree/master/source/modal-proof" id="buildmotion-modal"
+                height="666" style="width:100%;"></iframe>
+            <hr body/>
+
+            <h2 body>Podcasts</h2>
+            <p body>I've worked pretty hard on the podcast.
+                <a [routerLink]="['/podcast']">Check out the new episodes.</a>
+            </p>
+        </app-article> -->
+        <!-- SITE INTRODUCTION(S); -->
+
+        <!-- 2018 ANGULAR SUMMIT - CHICAGO, IL -->
+        <app-article>
+            <h2 title>2018 Angular Summit - Clearwater, FL</h2>
+            <p body>
+                I will be presenting at the
+                <a href="https://angularsummit.com/conference/clearwater/2018/12/home" target="_blank">2018 Angular Summit in Clearwater, FL</a> in December. The schedule just released. There is an amazing lineup
+                of
+                <a href="https://angularsummit.com/conference/clearwater/2018/12/speakers" target="_blank">speakers</a>,
+                <a href="https://angularsummit.com/conference/clearwater/2018/12/sessions" target="_blank">presentations</a>.
+            </p>
+            <p body>
+                I have 5 presentations lined up for this event - looking forward to Florida in December.
+            </p>
+            <ul body>
+                <li>
+                    <a href="https://angularsummit.com/conference/clearwater/2018/12/session?id=42424" target="_blank">Angular Application Architecture :: Leverage SOLID Principles and Practices from Enterprise Architecture</a>
+                </li>
+                <li>
+                    <a href="https://angularsummit.com/conference/clearwater/2018/12/session?id=42423" target="_blank">Custom Angular Libraries :: Complete guide on creating custom distributed/shared libraries for Angular Applications</a>
+                </li>
+                <li>
+                    <a href="https://angularsummit.com/conference/clearwater/2018/12/session?id=42422" target="_blank">Build Better Business Logic with Typescript :: Implementing and Using Design Patterns for Angular Apps</a>
+                </li>
+            </ul>
+            <a body href="https://angularsummit.com/conference/clearwater/2018/12/home" target="_blank">
+                <img body class="n-logo" src="./assets/img/angular-summit-florida.png" alt="">
+            </a>
+        </app-article>
+        <!-- 2018 ANGULAR SUMMIT - CHICAGO, IL -->
+
+        <!-- STUFF JUST FOR YOU - CARD(S); -->
+        <app-article>
+            <h2 title>Some delicious stuff just for you. Enjoy.</h2>
+            <div body class="row">
+                <!-- <p>Please help yourself to some free resources.</p> -->
+                <!-- CUSTOM ANGULAR MODULES GUIDE -->
+                <div class="col-lg-6 col-md-8">
+                    <app-card>
+                        <!-- <h1 title>Custom Angular Module</h1> -->
+                        <img header src="../assets/img/custom-angular-modules-book-cover.png" class="square img-fluid" alt="" />
+                        <h4 body>LET ME HELP YOU BUILD AN ANGULAR CUSTOM MODULE</h4>>
+                        <p body>Hi, I'm Matt Vaughn! I'm here to show you through my own experience/experiments exactly how you can
+                            build Angular Modules that work for you. I'm here to show you how it works.</p>
+                        <!-- <a footer [routerLink]="['/custom-angular-modules']" class="btn btn-danger btn-round">Get the Guide</a> -->
+                        <a footer (click)="GetTheGuide()" class="btn btn-danger btn-round">Get the Guide</a>
+                    </app-card>
+                </div>
+                <!-- CUSTOM ANGULAR MODULES GUIDE -->
+
+                <!-- ANGULARLICIO.US PODCAST PLAYLIST -->
+                <div class="col-lg-6 col-md-8">
+                    <app-card>
+                        <!-- <h1 title>Custom Angular Module</h1> -->
+                        <img header src="../assets/img/podcast-logo-600x600.png" width="83%" height="83%" class="square img-fluid" alt="" />
+                        <h4 body>PODCAST</h4>>
+                        <p body>Check out the new Angular podcast...with a focus on building enterprise applications using great
+                            tools, process, and principles. Listen on your favorite device: iTunes, SoundCloud and more...
+                        </p>
+                        <!-- <a footer [routerLink]="['/podcast']" class="btn btn-danger btn-round">LISTEN NOW</a> -->
+                        <a footer (click)="goToPodcastPlaylist()" class="btn btn-danger btn-round">LISTEN NOW</a>
+                    </app-card>
+                </div>
+                <!-- ANGULARLICIO.US PODCAST PLAYLIST -->
+
+                <!-- ANGULAR RULES ENGINE -->
+                <div class="col-lg-6 col-md-8">
+                    <app-card>
+                        <!-- <h1 title>Custom Angular Module</h1> -->
+                        <img header src="../assets/img/angular-rules-engine.png" class="square img-fluid" alt="" />
+                        <h4 body>BUSINESS AND VALIDATION RULE PROCESSING</h4>>
+                        <p body>Check out the angular-rules-engine to implement business and data validation rules. This framework
+                            comes complete with a set of off-the-shelf rules and base Typescript classes for you to create
+                            your own custom rules.
+                        </p>
+                        <!-- <a footer [routerLink]="['/angular-rules-engine']" class="btn btn-danger btn-round">RULE YOUR DOMAIN</a> -->
+                        <!-- <a footer (click)="goToAngularRulesEngine()" class="btn btn-danger btn-round">RULE YOUR DOMAIN</a> -->
+                        <a footer [routerLink]="['/angular-rules-engine']" [eventTracker]="{'category':'Cards','action':'Click','label':'Angular-Rules-Engine','value':1}"
+                            class="btn btn-danger btn-round">RULE YOUR DOMAIN</a>
+
+                    </app-card>
+                </div>
+                <!-- ANGULAR RULES ENGINE -->
+
+                <!-- ANGULARLICIO.US PODCAST PLAYLIST -->
+                <div class="col-lg-6 col-md-8">
+                    <app-card>
+                        <img header src="../assets/img/podcast-logo-600x600.png" width="83%" height="83%" class="square img-fluid" alt="" />
+                        <h4 body>PODCAST EQUIPMENT</h4>>
+                        <p body>Check out the podcast setup and equipment I use to record, edit/mix, and produce my podcasts.
+                        </p>
+                        <a footer (click)="goToPodcastSetup()" class="btn btn-danger btn-round">EQUIPMENT & SETUP</a>
+                    </app-card>
+                </div>
+                <!-- ANGULARLICIO.US PODCAST PLAYLIST -->
+
+            </div>
+        </app-article>
+        <!-- STUFF JUST FOR YOU - CARD(S); -->
+
+        <!-- BACKEND AND COMING SOON -->
+        <div class="section section-download" id="#download-section" data-background-color="black">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="text-center col-md-12 col-lg-8">
+                        <h3 class="title">Does your app need a back end?</h3>
+                        <h5 class="description">
+                            Cause if you do, I got you covered! You can leverage some tools and resources from
+                            <a href="http://www.buildmotion.com" target="_blank">www.BuildMotion.com</a>. You can use the Build Motion Framework for free from
+                            <a href="https://www.nuget.org/packages/BuildMotion/" target="_blank">Nuget.org/BuildMotion</a>.
+                        </h5>
+                    </div>
+                    <div class="text-center col-md-12 col-lg-8">
+                        <a href="https://www.nuget.org/packages/BuildMotion/" target="_blank" class="btn btn-primary btn-lg btn-round" role="button">
+                            Nuget
+                        </a>
+                        <a href="https://www.buildmotion.com" target="_blank" class="btn btn-primary btn-lg btn-simple btn-round" role="button">
+                            BUILD MOTION
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="row text-center mt-5">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2>Coming Soon...</h2>
+                        <h5 class="description">I'm getting ready to launch
+                            <a href="https://angularlicious.teachable.com/" target="_blank">Angularlicious on Teachable.com</a>. A place for video tutorials and other resources for learning
+                            how to build Enterprise Angular applications that will go the distance.
+                        </h5>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="https://angularlicious.teachable.com/" class="btn btn-neutral btn-round btn-lg" target="_blank">
+                            <i class="now-ui-icons arrows-1_share-66"></i> Angularlicious Training
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+            </div>
+        </div>
+        <!-- BACKEND AND COMING SOON -->
+
+        <!-- PODCAST PROVIDERS -->
+        <app-article>
+            <h1 title>Where Can I Listen to the Angularlicious Podcast?</h1>
+            <div body>
+                <app-podcast-providers></app-podcast-providers>
+            </div>
+        </app-article>
+        <!-- PODCAST PROVIDERS -->
+
+    </div>
+    <app-footer></app-footer>
+</div>
