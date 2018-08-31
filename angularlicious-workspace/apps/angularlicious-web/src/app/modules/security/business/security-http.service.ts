@@ -53,7 +53,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(userAccount);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.POST,
+      HttpRequestMethod.post,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -76,7 +76,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(confirmationToken);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.POST,
+      HttpRequestMethod.post,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -100,7 +100,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(confirmationToken);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.POST,
+      HttpRequestMethod.post,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -124,7 +124,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(subscriber);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.POST,
+      HttpRequestMethod.post,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -166,7 +166,7 @@ export class SecurityHttpService {
     );
 
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.POST,
+      HttpRequestMethod.post,
       this.httpService.createFormUrlencodedHeader(),
       requestUrl,
       body
