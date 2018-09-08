@@ -2,17 +2,6 @@
   "name": "@angularlicious/core",
   "version": "6.0.0",
   "description": "An Angular custom library that contains core application items for Angularlicious Angular applications.",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "./index.ts",
-      "umdModuleIds": {
-        "@angularlicious/rules-engine": "angularliciousRulesEngine",
-        "@angularlicious/logging": "angularliciousLogging",
-        "@angularlicious/foundation": "angularliciousFoundation"
-      }
-    },
-    "dest": "./../../dist/@angularlicious/core"
-  },
   "keywords": [
     "Angular",
     "Build Motion",

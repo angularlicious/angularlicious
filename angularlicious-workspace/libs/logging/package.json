@@ -1,12 +1,6 @@
 {
     "name": "@angularlicious/logging",
     "version": "6.0.0",
-    "ngPackage": {
-        "lib": {
-            "entryFile": "./index.ts"
-        },
-        "dest": "./../../dist/@angularlicious/logging"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/angularlicious/angularlicious.git"

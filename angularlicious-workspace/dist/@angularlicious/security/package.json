@@ -1,33 +1,14 @@
 {
   "name": "@angularlicious/security",
   "version": "6.0.1",
-  "description": "An Angular Security custom library for Angularlicious applications.",
-  "keywords": [
-    "Angular",
-    "security",
-    "Build Motion",
-    "Matt Vaughn",
-    "Angularlicious",
-    "angularlicious",
-    "#Angularlicious",
-    "OAuth",
-    "login"
-  ],
-  "author": "Matt Vaughn",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angularlicious/angularlicious.git"
-  },
   "peerDependencies": {
-    "@angular/http": "^5.1.3",
-    "@angular/router": "^5.1.3",
-    "@types/google.analytics": "0.0.36",
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/http": "^6.0.7",
+    "@angularlicious/logging": "^6.0.0",
     "@angularlicious/actions": "^6.0.0",
     "@angularlicious/rules-engine": "^6.0.0",
-    "@angularlicious/core": "^6.0.0",
-    "@angularlicious/foundation": "^6.0.0",
-    "@angularlicious/logging": "^6.0.0"
+    "rxjs": "^6.2.1"
   },
   "main": "bundles/angularlicious-security.umd.js",
   "module": "fesm5/angularlicious-security.js",

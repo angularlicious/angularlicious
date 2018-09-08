@@ -1,4 +1,4 @@
-export { AngularliciousSecurityModule } from './src/security.module';
-export { AngularliciousSecurityService } from './src/security.service';
-export { RegisterSubscriberComponent } from './src/components/register-subscriber/register-subscriber.component';
-export { Subscriber } from './src/models/subscriber.model';
+export { AngularliciousSecurityModule } from './lib/security.module';
+export { AngularliciousSecurityService } from './lib/security.service';
+export { RegisterSubscriberComponent } from './lib/components/register-subscriber/register-subscriber.component';
+export { Subscriber } from './lib/models/subscriber.model';

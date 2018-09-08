@@ -1,0 +1,8 @@
+{
+  "extends": "tsconfig.lib.json",
+  "paths":{
+    "@angularlicious/rules-engine": [
+      "node_modules/@angularlicious/rules-engine/index.ts"
+    ]
+  }
+}

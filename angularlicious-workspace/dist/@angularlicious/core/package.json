@@ -1,6 +1,6 @@
 {
   "name": "@angularlicious/core",
-  "version": "6.0.1",
+  "version": "6.0.0",
   "description": "An Angular custom library that contains core application items for Angularlicious Angular applications.",
   "keywords": [
     "Angular",

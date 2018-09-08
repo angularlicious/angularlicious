@@ -3,15 +3,6 @@
   "version": "6.0.0",
   "description": "@angularlicious/actions is a framework to build amazing business logic. It compliments the @angularlicious/rules-engine.",
   "license": "MIT",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "./index.ts",
-      "umdModuleIds": {
-        "@angularlicious/rules-engine": "angularliciousRulesEngine"
-      }
-    },
-    "dest": "./../../dist/@angularlicious/actions"
-  },
   "keywords": [
     "angular",
     "typescript",
