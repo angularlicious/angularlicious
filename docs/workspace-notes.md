@@ -27,16 +27,8 @@ We will create a workspace using Nrwl.io Nx extensions with the primary goal of 
 * How do I limit the usage of my library to only authorized consumers?
 * How can I use @scope to reference my custom libraries in my applications (web apps)?
 
-* Setup a development environment to build and test my libraries.
-* Publish a single library to NPM?
-* Build and publish libraries that have dependencies on my other custom libraries?
-* Configure external dependencies (i.e., other npm packages) for my library?
-* Create a manifest of items that will be exposed to consumers of my library?
-* Document my library's items and/or API?
-* Publish my library so that it can be consumed in different module formats (i.e., think Angular Package Format)?
-* Confirm that consumers can use my library?
-* Limit the usage of my library to only authorized consumers?
-* Use @scope to reference my custom libraries in my applications (web apps)?
+
+## Setup a development environment to build and test my libraries.
 
 ```text
 create-nx-workspace <YOUR-WORKSPACE-NAME> --npm-scope=<YOUR-SCOPE-NAME>

@@ -34,6 +34,12 @@
     },
     "test-lib": {
       "tags": []
+    },
+    "component-event": {
+      "tags": []
+    },
+    "component-event-e2e": {
+      "tags": []
     }
   }
 }
