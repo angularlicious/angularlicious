@@ -1,5 +1,5 @@
-# angular-actions
-Angular-Actions is a framework to build amazing business logic. It is built using Typescript and compliments the [Angular-Rules-Engine](https://www.npmjs.com/package/angular-rules-engine) on [npmjs.com](https://www.npmjs.com/package/angular-rules-engine.
+# @angularlicious/actions
+@angularlicious/actions is a framework to build amazing business logic. It is built using Typescript and compliments the [Angular-Rules-Engine](https://www.npmjs.com/package/angular-rules-engine) on [npmjs.com](https://www.npmjs.com/package/angular-rules-engine.
 ) or [GitHub](https://github.com/angularlicious/angular-rules-engine).
 
         Note: v6.0.x requires Angular 6.x packages.
@@ -11,7 +11,7 @@ You may not like it at first, but you will soon learn the ways. You do not say `
 
 Opinionated frameworks are like these companies. We learn how to work with each one and know what to expect. Many things in real life are not much different from using a framework to provide some structure around a given process, like developing software.
 
-So, let's not get hung up on the word ` framework ` thinking that it will just hinder our creativity and brilliance. It is only putting a little structure around what we already do - to allow us to focus on the important things while we create our next masterpiece. I encourage you to investigate the ` angular-actions ` framework, however, I encourage you more so to use well-known design patterns to implement your business logic. You and your team should have the benefit of a plan, process, and structure for implementing the most important code of the application. If you leave it up to the individual developer, you will get as many variations as there are developers and even more depending on how each deverloper *feels* on any given day. Do you really want to ` hope ` that your business code works - or would you rather have confidence of quantifiable quality of this code.
+So, let's not get hung up on the word ` framework ` thinking that it will just hinder our creativity and brilliance. It is only putting a little structure around what we already do - to allow us to focus on the important things while we create our next masterpiece. I encourage you to investigate the ` @angularlicious/actions ` framework, however, I encourage you more so to use well-known design patterns to implement your business logic. You and your team should have the benefit of a plan, process, and structure for implementing the most important code of the application. If you leave it up to the individual developer, you will get as many variations as there are developers and even more depending on how each deverloper *feels* on any given day. Do you really want to ` hope ` that your business code works - or would you rather have confidence of quantifiable quality of this code.
 
 ### What do you want when you develop your applications? 
 We want to focus on the solution and the value of the application when it is in the hands of our users. We want to know what to expect and to have things familiar to us - so we can just simply write code that is:
@@ -85,7 +85,7 @@ Why yes, there is! The ` @angularlicious/actions  ` framwork provides a consiste
 
 One of the consulting companies I worked for allowed me to use and define a framework for implementing business logic using the ` template method ` pattern. One of the other benefits, is that the implementations are consistent between other projects and applications. You have long-term consistency. This has allowed my current team that includes junior developers the opportunity to become productive faster.
 
-## Why Use Angular-Actions?
+## Why Use @angularlicious/actions?
 Business logic is the heart of your application. It deserves as much attention if not more than the visible parts of the application. Many times, the architecture or design of the business layer will determine the success of the application. For most business or enterprise applications you will want to strive for the following: 
 
 + Testability: 
@@ -104,16 +104,16 @@ There are many concerns for an application beyond just the business logic. Many 
     + Custom Services
     + Core Angular Services (i.e., Http, Route)
 
-` angular-actions ` is an NPM package that provides a framework for implementing business logic for Typescript applications. The action framework is an object-oriented set of classes that provide a mechanism to create testable, extensible, and maintainable business logic code. ` Business Actions ` developed using this framework provides a consistency in the implementation of business logic that allows developers to be more productive - as well as enabling developers to become familiar with the code base faster. 
+` @angularlicious/actions ` is an NPM package that provides a framework for implementing business logic for Typescript applications. The action framework is an object-oriented set of classes that provide a mechanism to create testable, extensible, and maintainable business logic code. ` Business Actions ` developed using this framework provides a consistency in the implementation of business logic that allows developers to be more productive - as well as enabling developers to become familiar with the code base faster. 
 
 The framework implements a [` Template Method Design Pattern `](http://www.dofactory.com/net/template-method-design-pattern) - which when combined with the [` Angular-Rules-Engine `](https://www.npmjs.com/package/angular-rules-engine) provides a productive and intuitive development environment to create complex business logic.
 
-*NOTE*: The ` @angularlicious/actions ` framework is a port from the ` BuildMotion Framework ` - which is 
+*NOTE*: The ` @angularlicious/actions ` framework is a port from the ` BuildMotion Framework ` - which is ****
 a Microsoft .NET framework for building .NET Web APIs and Domain Services with a rich business 
 logic layer. It uses ` actions ` and a ` rule engine ` to build extensible and maintainable 
 business logic and rules. Available on Nuget at: [https://www.nuget.org/packages/BuildMotion/](https://www.nuget.org/packages/BuildMotion/) with thousands of downloads combined ([Vergosity](https://www.nuget.org/packages/BuildMotion.Framework/)/BuildMotion).
 
-NPM: [https://www.npmjs.com/package/angular-actions](https://www.npmjs.com/package/angular-actions)
+NPM: [https://www.npmjs.com/package/@angularlicious/actions](https://www.npmjs.com/package/@angularlicious/actions)
 
 #### IAction
 All actions implement the following ` interface `. The ` execute() ` method is used as the entry point to start the processing pipeline of an action.
@@ -370,7 +370,7 @@ export class GetTimeSpanAction extends ActionBase {
 ```
 The base class ` ActionBase ` provides the opportunity to implement shared/common functionality of all actions that extend from this class. It allows access to ` infrastructure ` concerns but doesn't dirty the concrete implementations of concrete actions. 
 
-You can implement any of the ` angular-actions ` pipeline methods, like:
+You can implement any of the ` @angularlicious/actions ` pipeline methods, like:
 
 * validateAction()
 * postValidateAction()
@@ -494,7 +494,7 @@ export class ActionBase extends Action {
 }
 ```
 
-Using the action shown above is easy. You instantiate the action, pass in the required parameters. Call the ` Do(this) ` method of the action and return the response. Notice how clean and consistent the code is for calling business actions implemented using the ` angular-actions ` NPM package. 
+Using the action shown above is easy. You instantiate the action, pass in the required parameters. Call the ` Do(this) ` method of the action and return the response. Notice how clean and consistent the code is for calling business actions implemented using the ` @angularlicious/actions ` NPM package. 
 
 ```js
 getTimeSpan(startDate: DateTime, endDate: DateTime): TimeSpan {
@@ -506,12 +506,16 @@ getTimeSpan(startDate: DateTime, endDate: DateTime): TimeSpan {
 
 
 ## Testable
+Each action is a single unit of responsibility that is 100% testable. 
 
 ## Extensible
+The design pattern used to implement the business action allows for many extensibility endpoints. You can encapsulate common and/or shared behavior in a base class. You can provide custome implementations for each of the pipeline methods.
 
 ## Maintainable
+Using a defined pattern and sequence of methods allows for a consistent implementation of business logic. Consistency allows for easier maintenance. Also, adding new features and/or functionaltiy to actions is easier because you can take advantage of OOP techniques.
 
 ## Performant
+Business action classes are just Javascript in the end after transpilation. The framework takes advantage of ES6 elements as well as Typescript features to provide an OOP experience. A single business action should perform as well as any other Javascript function in the end. 
 
 &copy; 2016-2018 Build Motion, LLC [www.angularlicious.com](http://www.angularlicious.com)
 [Matt Vaughn on LinkedIn](https://www.linkedin.com/in/matt-vaughn-857a982?trk=profile-badge)

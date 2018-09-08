@@ -3,16 +3,6 @@
   "version": "6.0.0",
   "description": "A serious rule engine for Javascript applications. Perfect for Angular applications. Build something amazing!",
   "license": "MIT",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "./index.ts",
-      "umdModuleIds": {
-        "typescript-dotnet-commonjs": "typescriptDotnetCommonjs",
-        "typescript-dotnet-commonjs/System/Compare": "Compare"
-      }
-    },
-    "dest": "./../../dist/@angularlicious/rules-engine"
-  },
   "keywords": [
     "angular",
     "typescript",
@@ -20,6 +10,7 @@
     "validation",
     "rules engine",
     "business rules",
+    "rules",
     "angularlicious",
     "@angularlicious",
     "Matt Vaughn",

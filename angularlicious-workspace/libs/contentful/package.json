@@ -1,0 +1,27 @@
+{
+  "name": "@angularlicious/contentful",
+  "version": "6.0.0",
+  "description": "@angularlicious/contentful is a wrapper to use the [contentful] api/sdk to retrieve and/or manage remote content.",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "typescript",
+    "business logic",
+    "business actions",
+    "business rules",
+    "angularlicious",
+    "validation",
+    "javascript rules",
+    "Matt Vaughn",
+    "Angularlicious.com",
+    "Angularlicious"
+  ],
+  "author": "Matt Vaughn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "peerDependencies": {
+    "@angularlicious/rules-engine": "^6.0.0"
+  }
+}

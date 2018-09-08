@@ -1,0 +1,22 @@
+{
+    "name": "@angularlicious/markdown-editor",
+    "version": "6.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/angularlicious/angularlicious.git"
+    },
+    "keywords": [
+        "angularlicious",
+        "@angularlicious",
+        "Angular",
+        "Angularlicio.us",
+        "Matt Vaughn",
+        "logging"
+    ],
+    "author": "matt@angularlicious.com www.angularlicio.us",
+    "license": "MIT",
+    "peerDependencies": {
+        "@angular/common": "^6.0.7",
+        "@angular/core": "^6.0.7"
+    }
+}

@@ -1,0 +1,45 @@
+{
+  "npmScope": "angularlicious",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "actions": {
+      "tags": []
+    },
+    "logging": {
+      "tags": []
+    },
+    "rules-engine": {
+      "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "markdown-editor": {
+      "tags": []
+    },
+    "angularlicious-web": {
+      "tags": []
+    },
+    "angularlicious-web-e2e": {
+      "tags": []
+    },
+    "contentful": {
+      "tags": []
+    },
+    "test-lib": {
+      "tags": []
+    },
+    "component-event": {
+      "tags": []
+    },
+    "component-event-e2e": {
+      "tags": []
+    }
+  }
+}

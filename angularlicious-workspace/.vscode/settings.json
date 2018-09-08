@@ -1,10 +1,11 @@
 {
     "cSpell.words": [
-        "Angularlicio",
         "Injectable",
-        "Multipart",
+        "Nrwl",
         "angularlicious",
-        "nrwl",
-        "packagr"
-    ]
+        "contentful",
+        "packagr",
+        "presentational"
+    ],
+    "git.ignoreLimitWarning": true
 }
