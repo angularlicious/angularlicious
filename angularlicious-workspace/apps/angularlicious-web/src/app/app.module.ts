@@ -20,6 +20,7 @@ import { EventsModule } from './modules/events/events.module';
 import { CoreModule } from './modules/core/core.module';
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, BootstrapComponent],
@@ -32,7 +33,7 @@ import { BootstrapComponent } from './bootstrap/bootstrap.component';
     EventsModule,
     PodcastModule,
     RouterModule, // REQUIRED TO ENABLE ROUTES AND ROUTER OUTLET;
-    SubscriberModule
+    SubscriberModule, BrowserAnimationsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

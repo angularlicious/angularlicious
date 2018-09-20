@@ -224,6 +224,9 @@
               "apps/angularlicious-web/src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/angularlicious-web/src/assets/now-ui-kit/css/bootstrap.min.css",
               "apps/angularlicious-web/src/assets/now-ui-kit/css/now-ui-kit.css",
               "node_modules/simplemde/dist/simplemde.min.css",
@@ -284,6 +287,9 @@
             "tsConfig": "apps/angularlicious-web/tsconfig.spec.json",
             "karmaConfig": "apps/angularlicious-web/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/angularlicious-web/src/styles.css"
             ],
             "scripts": [],

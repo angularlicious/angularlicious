@@ -1,15 +1,17 @@
 {
     "cSpell.words": [
-        "Injectable",
-        "Validators",
         "angularlicio",
         "angularlicious",
+        "codelyzer",
         "compat",
         "contentful",
         "devkit",
         "devtools",
+        "jasminewd",
         "ngrx",
         "nrwl",
-        "packagr"
+        "packagr",
+        "tsickle",
+        "tslib"
     ]
 }
