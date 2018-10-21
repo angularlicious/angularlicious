@@ -5,6 +5,7 @@ resources/contentful/javascript\.zip
 
 angularlicious-workspace99/
 angularlicious-workspace/libs/titanium/node_modules/*
+<<<<<<< HEAD
 /angularlicious-workspace/dist
 /angularlicious-workspace/dist/*
 /angularlicious-workspace/dist/@angularlicious/*
@@ -84,3 +85,5 @@ angularlicious-workspace/libs/titanium/node_modules/*
 /angularlicious-workspace/dist/@angularlicious/security/fesm5/angularlicious-security.js
 /angularlicious-workspace/dist/@angularlicious/security/fesm5/angularlicious-security.js.map
 /angularlicious-workspace/dist/@angularlicious/security/package.json
+=======
+>>>>>>> 9e44962e7587e7cc30320ce53347832f1294515f
