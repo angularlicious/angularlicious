@@ -18,13 +18,6 @@ schematics
 npm install
 ```
 
-<<<<<<< HEAD
-Verify your installation of the packages:
-
-```ts
-// ADD OUTPUT HERE
-=======
->>>>>>> fix(apps) fix path issues after formatting;
 ```
 schematics [CollectionName:]SchematicName [options, ...]
 
