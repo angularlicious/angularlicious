@@ -58,10 +58,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/core": "^0.6.8",
-    "@angular/animations": "6.0.7",
     "@angular/common": "6.0.7",
-    "@angular/compiler": "6.0.7",
     "@angular/core": "6.0.7",
     "@angular/fire": "^5.1.0",
     "@angular/forms": "6.0.7",
