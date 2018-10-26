@@ -14,7 +14,12 @@
       "es2017",
       "dom"
     ],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@angularlicious/firebase": [
+        "libs/firebase/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "node_modules",
