@@ -5,24 +5,18 @@ import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
 
-import { AngularFireModule } from '@angular/fire'
+import { CoreModule } from './modules/core/core.module';
+import { SharedModule } from './modules/shared/shared.module';
 
-const firebaseOptions = {
-  apiKey: "AIzaSyDirRCd-S_2G9upW1dOAGSnisVLxY2ewFM",
-  authDomain: "angularlicious-auth.firebaseapp.com",
-  databaseURL: "https://angularlicious-auth.firebaseio.com",
-  projectId: "angularlicious-auth",
-  storageBucket: "angularlicious-auth.appspot.com",
-  messagingSenderId: "104315615877"
-}
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    CoreModule,
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    AngularFireModule.initializeApp(firebaseOptions)
+    SharedModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
