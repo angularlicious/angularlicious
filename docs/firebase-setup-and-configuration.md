@@ -113,7 +113,25 @@ apps\firebase-auth\src\test.ts 16ms
 </script>
 ```
 
-### Firebase Library
+### Add Modules to the Application
+
+Add `core` and `shared` modules to the application.
+
+```ts
+ng generate module modules/core --project=firebase-auth
+ng generate module modules/shared --project=firebase-auth
+```
+
+```ts
+ng generate module modules/core --project=firebase-auth
+CREATE apps/firebase-auth/src/app/modules/core/core.module.spec.ts (259 bytes)
+CREATE apps/firebase-auth/src/app/modules/core/core.module.ts (188 bytes)
+ng generate module modules/shared --project=firebase-auth
+CREATE apps/firebase-auth/src/app/modules/shared/shared.module.spec.ts (275 bytes)
+CREATE apps/firebase-auth/src/app/modules/shared/shared.module.ts (190 bytes)
+```
+
+## Firebase Library
 
 Creae a new library.
 
@@ -124,8 +142,7 @@ ng generate lib firebase --publishable --routing  --dry-run
 Output from the `generate lib` command.
 
 ```ts
-ng generate lib firebase --publishable --routing  --dry-run
-RENAME firebase-config.json => /libs/firebase/-config.json
+ng generate lib firebase --publishable --routing
 CREATE libs/firebase/karma.conf.js (968 bytes)
 CREATE libs/firebase/ng-package.json (179 bytes)
 CREATE libs/firebase/ng-package.prod.json (147 bytes)
@@ -145,4 +162,136 @@ UPDATE angular.json (24477 bytes)
 UPDATE package.json (6254 bytes)
 UPDATE tsconfig.json (504 bytes)
 UPDATE nx.json (858 bytes)
+
+> angularlicious-workspace@0.0.0 format D:\development\github\buildmotion-angularlicious\angularlicious-workspace
+> nx format:write "--untracked" "--quiet"
+
+libs\firebase\src\index.ts 601ms
+libs\firebase\src\lib\firebase.module.spec.ts 52ms
+libs\firebase\src\lib\firebase.module.ts 28ms
+libs\firebase\src\test.ts 32ms
+```
+
+Add a service to the lib.
+
+```ts
+ng generate service auth --project=firebase
+CREATE libs/firebase/src/lib/auth.service.spec.ts (362 bytes)
+CREATE libs/firebase/src/lib/auth.service.ts (133 bytes)
+```
+
+asdfa
+
+* AngularFireModule
+* AngularFireAuthModule
+* AngularFireDatabaseModule
+* AngularFirestoreModule
+
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Route } from '@angular/router';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+const firebaseOptions = {
+  apiKey: "AIzaSyDirRCd-S_2G9upW1dOAGSnisVLxY2ewFM",
+  authDomain: "angularlicious-auth.firebaseapp.com",
+  databaseURL: "https://angularlicious-auth.firebaseio.com",
+  projectId: "angularlicious-auth",
+  storageBucket: "angularlicious-auth.appspot.com",
+  messagingSenderId: "104315615877"
+}
+
+export const firebaseRoutes: Route[] = [];
+@NgModule({
+  imports: [
+    CommonModule, 
+    RouterModule,
+    AngularFireModule.initializeApp(firebaseOptions),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
+  ]
+})
+export class FirebaseModule {}
+```
+
+asdfasd
+
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FirebaseModule } from '@angularlicious/firebase';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FirebaseModule
+  ],
+  declarations: []
+})
+export class SharedModule { }
+```
+
+asdfas
+
+```ts
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+  imports: [
+    CommonModule
+  ],
+  declarations: []
+})
+export class CoreModule {
+
+  /**
+ * Use the check to determine if the [CoreModule] has been loaded in the parentModule (AppModule root).
+ */
+  constructor(
+    @Optional()
+    @SkipSelf()
+    parentModule: CoreModule
+  ) {
+    if (parentModule) {
+      throw new Error(
+        `CoreModule is already loaded. Import it in the AppModule only.`
+      );
+    }
+  }
+}
+```
+
+asdf
+
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { NxModule } from '@nrwl/nx';
+import { RouterModule } from '@angular/router';
+
+import { CoreModule } from './modules/core/core.module';
+import { SharedModule } from './modules/shared/shared.module';
+
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    CoreModule,
+    NxModule.forRoot(),
+    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    SharedModule 
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
 ```
