@@ -1,17 +1,15 @@
 # Firebase Setup and Configuration
 
-asdf
+Use these instructions to setup and configure Firebase for an Angular application. 
+
+        Create a new account or use your existing Google account to sign-up.
+
+
+Next, add a new project to your account. 
 
 
 ![](assets-auth/firebase-project.png)
 
-asdf
-
-![](assets-auth/creating-project.png)
-
-asdf
-
-![](assets-auth/firebase-dashboard.png)
 
 ## Firestore Quickstart
 
@@ -20,6 +18,10 @@ More information at: [https://github.com/firebase/quickstart-js/tree/master/fire
 Authentication | Sign-in method: Allow Anonymous authentication.
 
     * set to true/allow
+
+
+## Angular Project
+Use an existing Angular `workspace` or create a new project for the application.
 
 Install packages. 
 
@@ -111,4 +113,36 @@ apps\firebase-auth\src\test.ts 16ms
 </script>
 ```
 
-### 
+### Firebase Library
+
+Creae a new library.
+
+```ts
+ng generate lib firebase --publishable --routing  --dry-run
+```
+
+Output from the `generate lib` command.
+
+```ts
+ng generate lib firebase --publishable --routing  --dry-run
+RENAME firebase-config.json => /libs/firebase/-config.json
+CREATE libs/firebase/karma.conf.js (968 bytes)
+CREATE libs/firebase/ng-package.json (179 bytes)
+CREATE libs/firebase/ng-package.prod.json (147 bytes)
+CREATE libs/firebase/package.json (168 bytes)
+CREATE libs/firebase/src/test.ts (700 bytes)
+CREATE libs/firebase/src/index.ts (52 bytes)
+CREATE libs/firebase/tsconfig.lib.json (784 bytes)
+CREATE libs/firebase/tsconfig.spec.json (260 bytes)
+CREATE libs/firebase/tslint.json (269 bytes)
+CREATE libs/firebase/src/lib/firebase.module.ts (349 bytes)
+CREATE libs/firebase/src/lib/firebase.component.spec.ts (642 bytes)
+CREATE libs/firebase/src/lib/firebase.component.ts (273 bytes)
+CREATE libs/firebase/src/lib/firebase.service.spec.ts (386 bytes)
+CREATE libs/firebase/src/lib/firebase.service.ts (137 bytes)
+CREATE libs/firebase/src/lib/firebase.module.spec.ts (372 bytes)
+UPDATE angular.json (24477 bytes)
+UPDATE package.json (6254 bytes)
+UPDATE tsconfig.json (504 bytes)
+UPDATE nx.json (858 bytes)
+```
