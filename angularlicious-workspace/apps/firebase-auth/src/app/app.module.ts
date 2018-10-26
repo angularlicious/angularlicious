@@ -5,18 +5,14 @@ import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
 
-import { CoreModule } from './modules/core/core.module';
-import { SharedModule } from './modules/shared/shared.module';
-
+import { AngularFireModule } from '@angular/fire'
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    CoreModule,
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    SharedModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
