@@ -12,6 +12,7 @@ import { SharedModule } from './modules/shared/shared.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    CoreModule,
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     HttpClientModule,
