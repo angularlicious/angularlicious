@@ -4,6 +4,9 @@
         "Nrwl",
         "angularlicious",
         "contentful",
+        "firebaseapp",
+        "firestore",
+        "loggly",
         "packagr",
         "presentational"
     ],

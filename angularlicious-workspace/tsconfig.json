@@ -18,6 +18,9 @@
     "paths": {
       "@angularlicious/firebase": [
         "libs/firebase/src/index.ts"
+      ],
+      "@angularlicious/configuration": [
+        "libs/configuration/src/index.ts"
       ]
     }
   },

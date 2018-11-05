@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  name: 'production',
+  application: 'firebae-auth',
+  production: true,
+  appConfig: 'asset/config/configuration.production.json'
 };

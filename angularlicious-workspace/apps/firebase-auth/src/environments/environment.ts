@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  name: 'development',
+  application: 'firebase-auth',
+  production: false,
+  appConfig: 'assets/config/configuration.development.json'
 };
 
 /*

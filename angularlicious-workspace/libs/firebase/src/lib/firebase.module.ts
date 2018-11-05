@@ -1,29 +1,44 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Route } from '@angular/router';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire'
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
-const firebaseOptions = {
-  apiKey: "AIzaSyDirRCd-S_2G9upW1dOAGSnisVLxY2ewFM",
-  authDomain: "angularlicious-auth.firebaseapp.com",
-  databaseURL: "https://angularlicious-auth.firebaseio.com",
-  projectId: "angularlicious-auth",
-  storageBucket: "angularlicious-auth.appspot.com",
-  messagingSenderId: "104315615877"
-}
+import { AngularliciousLoggingModule } from 'libs/logging/src';
+import { AngularliciousFoundationModule } from 'libs/foundation/src';
 
 export const firebaseRoutes: Route[] = [];
+
+const firebaseOptions = {
+ 
+}
+
 @NgModule({
   imports: [
-    CommonModule, 
+    CommonModule,
     RouterModule,
+    // AngularFireModule.initializeApp(window['firebase-config']),
     AngularFireModule.initializeApp(firebaseOptions),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularliciousLoggingModule,
+    AngularliciousFoundationModule
+  ],
+  providers: [
   ]
 })
-export class FirebaseModule {}
+export class FirebaseModule {
+  // static forRoot(optionsToken: FirebaseOptions): ModuleWithProviders {
+  //   return {
+  //     ngModule: FirebaseModule,
+  //     providers: [
+  //       {
+  //         provide: FirebaseOptionsToken,
+  //         useValue: optionsToken
+  //       },
+  //     ]
+  //   };
+  // }
+}
