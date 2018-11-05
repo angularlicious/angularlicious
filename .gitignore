@@ -3,3 +3,9 @@ angularlicious-workspace/node_modules/
 resources/contentful/javascript/
 resources/contentful/javascript\.zip
 angularlicious-workspace99/
+
+angularlicious-workspace/apps/firebase-auth/src/assets/config/
+
+angularlicious-workspace/libs/firebase/src/lib/firebaseConfig\.json
+
+angularlicious-workspace/version\.js

@@ -49,6 +49,9 @@
     },
     "firebase": {
       "tags": []
+    },
+    "configuration": {
+      "tags": []
     }
   }
 }
