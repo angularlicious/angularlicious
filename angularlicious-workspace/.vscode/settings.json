@@ -2,6 +2,7 @@
     "cSpell.words": [
         "Injectable",
         "Nrwl",
+        "angularlicio",
         "angularlicious",
         "contentful",
         "firebaseapp",
@@ -10,5 +11,6 @@
         "packagr",
         "presentational"
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "editor.fontFamily": "'Source Code Pro Light', Consolas, 'Courier New', monospace"
 }

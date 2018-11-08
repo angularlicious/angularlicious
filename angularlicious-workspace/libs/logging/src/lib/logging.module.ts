@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConfigurationService } from '@angularlicious/configuration';
+import { NgxLogglyModule} from 'ngx-loggly-logger'
+import { AngularliciousRulesEngineModule } from '@angularlicious/rules-engine';
 
 @NgModule({
-  imports: [CommonModule],
-  providers: [
-    ConfigurationService
-  ]
+  imports: [CommonModule,
+    AngularliciousRulesEngineModule,
+    NgxLogglyModule.forRoot()],
+  providers: []
 })
 export class AngularliciousLoggingModule {
 }
