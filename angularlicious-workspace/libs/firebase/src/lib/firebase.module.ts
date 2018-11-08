@@ -11,7 +11,7 @@ import { AngularliciousFoundationModule } from 'libs/foundation/src';
 export const firebaseRoutes: Route[] = [];
 
 const firebaseOptions = {
- 
+
 }
 
 @NgModule({

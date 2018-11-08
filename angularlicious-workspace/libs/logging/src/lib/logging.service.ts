@@ -1,8 +1,11 @@
 import { Injectable, Optional } from '@angular/core';
 
 import { Severity } from './severity.enum';
-import { LoggingConfig, ILoggingConfig } from '@angularlicious/configuration';
+import { ILoggingConfig, IConfiguration } from '@angularlicious/configuration';
 import { ConfigurationService } from '@angularlicious/configuration';
+import { LogEntry } from './log-entry';
+import { Subject, ReplaySubject } from 'rxjs';
+import { ILogEntry } from './i-log-entry';
 
 @Injectable()
 export class AngularliciousLoggingService {
@@ -16,18 +19,25 @@ export class AngularliciousLoggingService {
   isProduction: boolean;
   loggingConfig: ILoggingConfig;
 
+  logEntries$: Subject<ILogEntry> = new ReplaySubject<ILogEntry>(1);
+
   /**
    * The [LoggingService] constructor.
    */
   constructor(
-    @Optional() public config: ConfigurationService,
+    @Optional() public config: ConfigurationService
   ) {
     this.timestamp = new Date(Date.now());
     this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
-    this.setupConfiguration();
+
+    if(config) {
+      this.config.settings$.subscribe(
+        settings => this.setupConfiguration(settings)
+      );
+    }
   }
 
-  setupConfiguration() {
+  setupConfiguration(settings: IConfiguration) {
     if (this.config && this.config.settings && this.config.settings.logging) {
       this.loggingConfig = this.config.settings.logging;
       this.applicationName = (this.loggingConfig && this.loggingConfig.applicationName) ? this.loggingConfig.applicationName : 'application';
@@ -47,34 +57,13 @@ export class AngularliciousLoggingService {
    * @param severity
    * @param message
    */
-  log(source: string, severity: Severity, message: string) {
+  log(source: string, severity: Severity, message: string, tags?: string[]) {
     this.source = `${this.applicationName}.${source}`;
     this.severity = severity;
     this.message = message;
     this.timestamp = new Date(Date.now());
 
-    const logItem = `${this.severity} from ${this.source} at ${this.timestamp}: ${this.message}`;
-
-    switch (this.severity) {
-      
-      case Severity.Debug:
-        console.debug(logItem);
-        break;
-      case Severity.Information:
-        console.info(logItem);
-        break;
-      case Severity.Warning:
-        console.warn(logItem);
-        break;
-      case Severity.Error:
-        console.error(logItem);
-        break;
-      case Severity.Critical:
-        console.error(logItem);
-        break;
-
-      default:
-        break;
-    }
+    const logEntry = new LogEntry(this.applicationName, this.source, this.severity, this.message, tags);
+    this.logEntries$.next(logEntry);
   }
 }
