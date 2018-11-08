@@ -4,7 +4,7 @@ import { ConfigurationService } from '@angularlicious/configuration';
 import { Optional } from '@angular/core';
 import { LogglyService } from 'ngx-loggly-logger';
 import { AngularliciousLoggingService } from '../logging.service';
-import { IConfiguration, ILogglyConfig } from 'dist/@angularlicious/configuration';
+import { IConfiguration, ILogglyConfig } from '@angularlicious/configuration';
 
 export class LogglyWriter extends LogWriter {
 
