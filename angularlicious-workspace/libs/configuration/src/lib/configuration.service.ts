@@ -28,7 +28,6 @@ export class ConfigurationService {
     .then(jsonConfig => {
       this.settings = <IConfiguration>jsonConfig;
     });
-    // this.settings = <IConfiguration>window['config'];
   }
 
   set settings(value) {
