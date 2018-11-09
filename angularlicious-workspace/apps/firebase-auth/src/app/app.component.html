@@ -1,0 +1,8 @@
+
+<div style="text-align:center">
+  <h1>Welcome {{user? user.displayName : 'Guest'}} to firebase-auth!</h1>
+</div>
+
+<h2>App Key: {{title}}</h2>
+<button (click)="loginWithGoogle()">Google</button>
+<router-outlet></router-outlet>

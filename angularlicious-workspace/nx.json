@@ -40,6 +40,18 @@
     },
     "component-event-e2e": {
       "tags": []
+    },
+    "firebase-auth": {
+      "tags": []
+    },
+    "firebase-auth-e2e": {
+      "tags": []
+    },
+    "firebase": {
+      "tags": []
+    },
+    "configuration": {
+      "tags": []
     }
   }
 }
