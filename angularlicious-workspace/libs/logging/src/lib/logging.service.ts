@@ -1,29 +1,50 @@
 import { Injectable, Optional } from '@angular/core';
 
-import { LoggingServiceConfig } from './logging.service.config';
 import { Severity } from './severity.enum';
+import { ILoggingConfig, IConfiguration } from '@angularlicious/configuration';
+import { ConfigurationService } from '@angularlicious/configuration';
+import { LogEntry } from './log-entry';
+import { Subject, ReplaySubject } from 'rxjs';
+import { ILogEntry } from './i-log-entry';
 
 @Injectable()
 export class AngularliciousLoggingService {
-  applicationName = 'Angularlicio.us';
   serviceName = 'LoggingService';
   source: string;
   severity: Severity;
   message: string;
   timestamp: Date;
+  applicationName: string = 'application';
+  version: string = '0.0.0';
+  isProduction: boolean;
+  loggingConfig: ILoggingConfig;
+
+  logEntries$: Subject<ILogEntry> = new ReplaySubject<ILogEntry>(1);
 
   /**
    * The [LoggingService] constructor.
    */
-  // constructor(
-  //     // @Optional() private config: loggingServiceConfig
-  //     applicationName: string
-  // ) {
-  //     this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
-  //     if(applicationName) {
-  //         this.applicationName = applicationName;
-  //     }
-  // }
+  constructor(
+    @Optional() public config: ConfigurationService
+  ) {
+    this.timestamp = new Date(Date.now());
+    this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
+
+    if(config) {
+      this.config.settings$.subscribe(
+        settings => this.setupConfiguration(settings)
+      );
+    }
+  }
+
+  setupConfiguration(settings: IConfiguration) {
+    if (this.config && this.config.settings && this.config.settings.logging) {
+      this.loggingConfig = this.config.settings.logging;
+      this.applicationName = (this.loggingConfig && this.loggingConfig.applicationName) ? this.loggingConfig.applicationName : 'application';
+      this.version = (this.loggingConfig && this.loggingConfig.version) ? this.loggingConfig.version : '0.0.0';
+      this.isProduction = (this.loggingConfig && this.loggingConfig.isProduction) ? this.loggingConfig.isProduction : false;
+    }
+  }
 
   /**
    * Use this method to send a log message with severity and source information
@@ -36,21 +57,13 @@ export class AngularliciousLoggingService {
    * @param severity
    * @param message
    */
-  log(source: string, severity: Severity, message: string) {
+  log(source: string, severity: Severity, message: string, tags?: string[]) {
     this.source = `${this.applicationName}.${source}`;
     this.severity = severity;
     this.message = message;
-    this.timestamp = new Date();
+    this.timestamp = new Date(Date.now());
 
-    const msg = `${this.message}`;
-
-    // todo: add switch based on the severity to:
-    // console.info
-    // console.warn
-    // console.error
-    // console.log
-    console.log(
-      `${this.severity} from ${this.source}: ${msg} (${this.timestamp})`
-    );
+    const logEntry = new LogEntry(this.applicationName, this.source, this.severity, this.message, tags);
+    this.logEntries$.next(logEntry);
   }
 }
