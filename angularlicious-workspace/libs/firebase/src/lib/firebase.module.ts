@@ -11,6 +11,12 @@ import { AngularliciousFoundationModule } from 'libs/foundation/src';
 export const firebaseRoutes: Route[] = [];
 
 const firebaseOptions = {
+  apiKey: "AIzaSyB0si75Kr6tB5N04pwgxlm0EaNhzKkmYGQ",
+  authDomain: "angularlicious-auth-dev.firebaseapp.com",
+  databaseURL: "https://angularlicious-auth-dev.firebaseio.com",
+  projectId: "angularlicious-auth-dev",
+  storageBucket: "angularlicious-auth-dev.appspot.com",
+  messagingSenderId: "939212934002"
 }
 
 @NgModule({
