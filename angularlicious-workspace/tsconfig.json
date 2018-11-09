@@ -14,7 +14,30 @@
       "es2017",
       "dom"
     ],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@angularlicious/rules-engine": [
+        "libs/rules-engine/src/index.ts"
+      ],
+      "@angularlicious/foundation": [
+        "libs/foundation/src/index.ts"
+      ],
+      "@angularlicious/core": [
+        "libs/core/src/index.ts"
+      ],
+      "@angularlicious/actions": [
+        "libs/actions/src/index.ts"
+      ],
+      "@angularlicious/logging": [
+        "libs/logging/src/index.ts"
+      ],
+      "@angularlicious/firebase": [
+        "libs/firebase/src/index.ts"
+      ],
+      "@angularlicious/configuration": [
+        "libs/configuration/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "node_modules",
