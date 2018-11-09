@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {
@@ -12,8 +12,8 @@ import { SecurityApiService } from './business/security-api.service';
 import { RegisterSubscriberComponent } from './components/register-subscriber/register-subscriber.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpBaseService } from '@angularlicious/foundation';
 import { AngularliciousRulesEngineModule } from '@angularlicious/rules-engine';
+import { LoggingConfig } from '@angularlicious/configuration';
 
 @NgModule({
   imports: [
@@ -35,4 +35,17 @@ import { AngularliciousRulesEngineModule } from '@angularlicious/rules-engine';
     // HttpBaseService
   ]
 })
-export class AngularliciousSecurityModule {}
+export class AngularliciousSecurityModule {
+  static forRoot(config: LoggingConfig): ModuleWithProviders {
+    return {
+      ngModule: AngularliciousSecurityModule,
+      providers: [
+        {
+          provide: LoggingConfig,
+          useValue: config
+        },
+        HttpClientModule
+      ]
+    };
+  }
+}
