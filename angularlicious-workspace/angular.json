@@ -788,6 +788,46 @@
           }
         }
       }
+    },
+    "error-handling": {
+      "root": "libs/error-handling",
+      "sourceRoot": "libs/error-handling/src",
+      "projectType": "library",
+      "prefix": "angularlicious",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/error-handling/tsconfig.lib.json",
+            "project": "libs/error-handling/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/error-handling/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/error-handling/src/test.ts",
+            "tsConfig": "libs/error-handling/tsconfig.spec.json",
+            "karmaConfig": "libs/error-handling/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/error-handling/tsconfig.lib.json",
+              "libs/error-handling/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
