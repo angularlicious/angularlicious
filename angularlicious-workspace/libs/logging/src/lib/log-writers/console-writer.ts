@@ -14,7 +14,6 @@ export class ConsoleWriter extends LogWriter {
     private loggingService: AngularliciousLoggingService
   ) {
     super();
-    console.log('hi');
     this.loggingService.logEntries$.subscribe(
       logEntry => this.handleLogEntry(logEntry)
     );
