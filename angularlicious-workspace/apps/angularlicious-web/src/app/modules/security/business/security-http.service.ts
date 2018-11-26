@@ -17,9 +17,9 @@ import { BehaviorSubject } from 'rxjs';
 import { AngularliciousLoggingService, Severity } from '@angularlicious/logging';
 
 import { HttpBaseService, HttpRequestMethod } from '@angularlicious/foundation';
-import { Credentials } from '../models/credentials.model';
-import { UserAccount } from '../models/user-account.model';
-import { ConfirmationToken } from '../models/confirmation-token.model';
+import { Credentials } from './../models/credentials.model';
+import { UserAccount } from './../models/user-account.model';
+import { ConfirmationToken } from './../models/confirmation-token.model';
 import { Subscriber } from '@angularlicious/security';
 import { ServiceResponse } from '@angularlicious/foundation';
 import { HttpClient } from '@angular/common/http';
@@ -53,7 +53,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(userAccount);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.post,
+      HttpRequestMethod.POST,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -76,7 +76,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(confirmationToken);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.post,
+      HttpRequestMethod.POST,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -100,7 +100,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(confirmationToken);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.post,
+      HttpRequestMethod.POST,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -124,7 +124,7 @@ export class SecurityHttpService {
 
     const body = JSON.stringify(subscriber);
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.post,
+      HttpRequestMethod.POST,
       this.httpService.createHeader(false),
       requestUrl,
       body
@@ -166,7 +166,7 @@ export class SecurityHttpService {
     );
 
     const options = this.httpService.createRequestOptions(
-      HttpRequestMethod.post,
+      HttpRequestMethod.POST,
       this.httpService.createFormUrlencodedHeader(),
       requestUrl,
       body

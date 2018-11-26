@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/angularlicious-web",
+    "outDir": "../../dist/out-tsc/apps/component-event",
     "module": "commonjs",
     "types": [
       "jasmine",
