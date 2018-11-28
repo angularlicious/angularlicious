@@ -1,11 +1,17 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FirebaseModule, AuthService } from '@angularlicious/firebase';
 import { AngularliciousLoggingService, AngularliciousLoggingModule, LogglyWriter } from '@angularlicious/logging';
 import { ConfigurationService, ConfigurationModule } from '@angularlicious/configuration';
 import { environment } from 'apps/firebase-auth/src/environments/environment';
 import { ConsoleWriter } from 'libs/logging/src/lib/log-writers/console-writer';
+import { ErrorHandlericious } from 'libs/error-handlericious/src/lib/error-handlericious';
+import { ErrorHandlericiousModule } from '@angularlicious/error-handlericious';
 
+/**
+ * The factory function to initialize the configuration service for the application.
+ * @param configService 
+ */
 export function initializeConfiguration(configService: ConfigurationService) {
   console.log(`Initializing firebase configuration from [AppModule]`);
   configService.loadConfiguration();
@@ -14,6 +20,13 @@ export function initializeConfiguration(configService: ConfigurationService) {
   }
 }
 
+/**
+ * The factory function to initialize the logging service and writer for the
+ * application. 
+ * 
+ * @param loggingService 
+ * @param consoleWriter 
+ */
 export function initializeLogWriter(loggingService: AngularliciousLoggingService, consoleWriter: ConsoleWriter) {
   console.log(`Initializing [Console Writer] from [AppModule]`);
   return () => {
@@ -24,12 +37,17 @@ export function initializeLogWriter(loggingService: AngularliciousLoggingService
 @NgModule({
   imports: [
     CommonModule,
+    ErrorHandlericiousModule,
     AngularliciousLoggingModule,
     ConfigurationModule.forRoot({filePath: `assets/config/configuration.${environment.name}.json`}),
     FirebaseModule
   ],
   declarations: [],
   providers: [
+    {
+      provide: ErrorHandler,
+      useClass: ErrorHandlericious
+    },
     ConfigurationService,
     AngularliciousLoggingService,
     AuthService,
@@ -45,12 +63,6 @@ export function initializeLogWriter(loggingService: AngularliciousLoggingService
       deps: [AngularliciousLoggingService, ConsoleWriter, LogglyWriter],
       multi: true
     },
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: initializeLogglyWriter,
-    //   deps: [ConfigurationService, AngularliciousLoggingService, LogglyWriter],
-    //   multi: true
-    // },
    ConsoleWriter,
    LogglyWriter
   ]

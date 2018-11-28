@@ -14,7 +14,6 @@ export class SecurityActionBase extends ActionBase {
    * Use the [Do] method to perform the action.
    */
   Do(businessProvider: SecurityBusinessProviderService) {
-    // Provide the [SecurityBusinessProviderService], [ServiceContext], and [LoggingService] to action;
     this.businessProvider = businessProvider;
     this.serviceContext = businessProvider.serviceContext;
     this.loggingService = businessProvider.loggingService;

@@ -36,6 +36,9 @@
       ],
       "@angularlicious/configuration": [
         "libs/configuration/src/index.ts"
+      ],
+      "@angularlicious/error-handlericious": [
+        "libs/error-handlericious/src/index.ts"
       ]
     }
   },

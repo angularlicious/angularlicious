@@ -32,7 +32,6 @@ import { LoggingConfig } from '@angularlicious/configuration';
     AngularliciousLoggingService,
     SecurityApiService, //PROVIDE INTERNAL SERVICES FOR THE MODULE; SCOPED TO THIS MODULE;
     SecurityBusinessProviderService //PROVIDE INTERNAL SERVICES FOR THE MODULE; SCOPED TO THIS MODULE;
-    // HttpBaseService
   ]
 })
 export class AngularliciousSecurityModule {

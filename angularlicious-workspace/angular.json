@@ -793,8 +793,35 @@
           }
         }
       }
+    },
+    "error-handlericious": {
+      "root": "libs/error-handlericious",
+      "sourceRoot": "libs/error-handlericious/src",
+      "projectType": "library",
+      "prefix": "angularlicious",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/error-handlericious/src/test.ts",
+            "tsConfig": "libs/error-handlericious/tsconfig.spec.json",
+            "karmaConfig": "libs/error-handlericious/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/error-handlericious/tsconfig.lib.json",
+              "libs/error-handlericious/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
-  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,

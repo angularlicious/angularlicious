@@ -2,7 +2,7 @@ import { Injectable, Optional } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IConfiguration } from './i-configuration';
 import { ConfigurationContext } from './configuration-context';
-import { Subject, ReplaySubject, config } from 'rxjs';
+import { Subject, ReplaySubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

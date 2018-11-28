@@ -52,6 +52,9 @@
     },
     "configuration": {
       "tags": []
+    },
+    "error-handlericious": {
+      "tags": []
     }
   }
 }
