@@ -7,7 +7,7 @@ import { ActionResult } from '@angularlicious/actions';
 import { AngularliciousLoggingService } from '@angularlicious/logging';
 import { Severity } from '@angularlicious/logging';
 import { ActionBase, ServiceResponse } from '@angularlicious/foundation';
-import { SecurityBusinessProviderService } from '../security-business-provider.service';
+import { SecurityBusinessProviderService } from './../security-business-provider.service';
 import { Observable } from 'rxjs';
 
 export class SecurityActionBase extends ActionBase {

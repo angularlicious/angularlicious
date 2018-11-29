@@ -1,7 +1,6 @@
-import { Inject, Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs';
 
 import { HttpBaseService, ServiceResponse } from '@angularlicious/foundation';
 import {

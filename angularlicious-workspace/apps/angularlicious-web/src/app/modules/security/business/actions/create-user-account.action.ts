@@ -11,7 +11,7 @@ import { Severity } from '@angularlicious/logging';
 import { SecurityActionBase } from './security-action-base.action';
 
 // import action specific items:
-import { UserAccount } from '../../models/user-account.model';
+import { UserAccount } from './../../models/user-account.model';
 
 export class CreateUserAccountAction extends SecurityActionBase {
   httpBase: HttpBaseService;

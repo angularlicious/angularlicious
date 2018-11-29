@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { ComponentBase } from '@angularlicious/foundation';
 import { AngularliciousLoggingService, Severity } from '@angularlicious/logging';
-import { SubscriberItem } from '../../../models/subscriber-item.model';
+import { SubscriberItem } from './../../../models/subscriber-item.model';
 
 @Component({
   selector: 'app-subscriber-list',

@@ -10,7 +10,7 @@ import {
 } from '@angularlicious/foundation';
 import { AngularliciousLoggingService, Severity } from '@angularlicious/logging';
 // import { SecurityService } from './../../../modules/security/security.service';
-import { ConfirmationToken } from '../../security/models/confirmation-token.model';
+import { ConfirmationToken } from './../../../modules/security/models/confirmation-token.model';
 
 @Component({
   selector: 'app-subscriber-confirmation',

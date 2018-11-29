@@ -1,20 +1,7 @@
-import { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs';
-
-// // import { Response } from '@angular/http';
-import { ActionResult } from '@angularlicious/actions';
 import * as rules from '@angularlicious/rules-engine';
-
-import {
-  HttpBaseService,
-  ServiceResponse,
-  ErrorResponse
-} from '@angularlicious/foundation';
 import { Severity } from '@angularlicious/logging';
-
 import { Subscriber } from '../../models/subscriber.model';
 import { SecurityActionBase } from './security-action-base.action';
-import { HttpResponse } from '@angular/common/http';
 
 export class RegisterSubscriberAction extends SecurityActionBase {
   constructor(private subscriber: Subscriber) {
@@ -61,13 +48,7 @@ export class RegisterSubscriberAction extends SecurityActionBase {
    * does not contain any rule violations.
    */
   performAction() {
-    this.loggingService.log(
-      this.actionName,
-      Severity.Information,
-      `Running the [performAction] for the ${this.actionName}.`
-    );
-    this.response = this.businessProvider.securityApiService.registerSubscriber(
-      this.subscriber
-    );
+    this.loggingService.log(this.actionName, Severity.Information, `Running the [performAction] for the ${this.actionName}.`);
+    this.response = this.businessProvider.securityApiService.registerSubscriber(this.subscriber);
   }
 }

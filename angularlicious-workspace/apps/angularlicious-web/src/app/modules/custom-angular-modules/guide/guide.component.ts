@@ -8,10 +8,10 @@ import { AngularliciousLoggingService, Severity } from '@angularlicious/logging'
 /**
  * Import Analytic Constants;
  */
-import { Analytics } from '../../../models/analytics.model';
-import { AnalyticCategories } from '../../../models/analytics-categories.model';
-import { AnalyticActions } from '../../../models/analytics-actions.model';
-import { AnalyticLabels } from '../../../models/analytics-labels.model';
+import { Analytics } from './../../../models/analytics.model';
+import { AnalyticCategories } from './../../../models/analytics-categories.model';
+import { AnalyticActions } from './../../../models/analytics-actions.model';
+import { AnalyticLabels } from './../../../models/analytics-labels.model';
 
 import { Subscriber } from '@angularlicious/security';
 import { ServiceResponse, ErrorResponse } from '@angularlicious/foundation';

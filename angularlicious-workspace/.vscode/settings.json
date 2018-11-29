@@ -1,15 +1,17 @@
 {
     "cSpell.words": [
+        "Handlericious",
         "Injectable",
-        "Validators",
+        "Nrwl",
         "angularlicio",
         "angularlicious",
-        "compat",
         "contentful",
-        "devkit",
-        "devtools",
-        "ngrx",
-        "nrwl",
-        "packagr"
-    ]
+        "firebaseapp",
+        "firestore",
+        "loggly",
+        "packagr",
+        "presentational"
+    ],
+    "git.ignoreLimitWarning": true,
+    "editor.fontFamily": "'Source Code Pro Light', Consolas, 'Courier New', monospace"
 }

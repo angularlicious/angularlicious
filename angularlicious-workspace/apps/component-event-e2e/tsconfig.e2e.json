@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/angularlicious-web-e2e",
+    "outDir": "../../dist/out-tsc/apps/component-event-e2e",
     "module": "commonjs",
     "target": "es5",
     "types": [
