@@ -32,7 +32,7 @@ export class ServiceBase {
    * this base class. It will allow the members of the base class to log information
    * using the common LoggingService.
    */
-  constructor(public loggingService: AngularliciousLoggingService) {}
+  constructor(public loggingService: AngularliciousLoggingService) { }
 
   /**
    * Use to extract the contents of the HTTP body and return a JSON
@@ -62,8 +62,9 @@ export class ServiceBase {
       .WithMessageType(MessageType.Error)
       .WithSource(this.serviceName);
 
+    const tags: string[] = [`${this.serviceName}`]
     const logItem = `${message.toString()}; ${error.stack}`;
-    this.loggingService.log(this.serviceName, Severity.Error, logItem);
+    this.loggingService.log(this.serviceName, Severity.Error, logItem, tags);
 
     this.serviceContext.addMessage(message);
   }
@@ -78,10 +79,13 @@ export class ServiceBase {
       .WithMessageType(MessageType.Error)
       .WithSource(this.serviceName);
 
+    const tags: string[] = [`${this.serviceName}`]
+
     this.loggingService.log(
       this.serviceName,
       Severity.Error,
-      message.toString()
+      message.toString(),
+      tags
     );
 
     this.serviceContext.addMessage(message);
@@ -96,7 +100,7 @@ export class ServiceBase {
   ): Observable<Response> {
     const message = `${error.toString()} ${
       requestOptions.requestUrl
-    }, ${JSON.stringify(requestOptions.body)}`;
+      }, ${JSON.stringify(requestOptions.body)}`;
     this.loggingService.log(this.serviceName, Severity.Error, message);
     if (error && error._body) {
       try {
@@ -133,7 +137,7 @@ export class ServiceBase {
   ): Observable<Response> {
     const message = `${error.toString()} ${
       requestOptions.requestUrl
-    }, ${JSON.stringify(requestOptions.body)}`;
+      }, ${JSON.stringify(requestOptions.body)}`;
     this.loggingService.log(this.serviceName, Severity.Error, message);
     if (error && error._body) {
       try {

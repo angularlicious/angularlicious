@@ -4,7 +4,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import * as firebase from 'firebase/app';
 import { from, Subject, ReplaySubject } from 'rxjs';
 import { ServiceBase } from '@angularlicious/foundation';
-import { AngularliciousLoggingService } from '@angularlicious/logging';
+import { AngularliciousLoggingService, Severity } from '@angularlicious/logging';
 import { User } from './models/user.model';
 
 @Injectable({
@@ -12,7 +12,7 @@ import { User } from './models/user.model';
 })
 export class AuthService extends ServiceBase {
   private user: User;
-  user$: Subject<User> = new ReplaySubject<User>(1); 
+  user$: Subject<User> = new ReplaySubject<User>(1);
 
   constructor(
     loggingService: AngularliciousLoggingService,
@@ -22,19 +22,19 @@ export class AuthService extends ServiceBase {
     super(loggingService);
     this.serviceName = 'AuthService';
 
-    this.initializeFirebase(); 
+    this.initializeFirebase();
 
     auth.authState.subscribe(
       authState => this.handleAuthState(authState),
       error => console.log(error)
     );
-   }
+  }
 
-   initializeFirebase() {
-   }
+  initializeFirebase() {
+  }
 
-   handleAuthState(authState: firebase.User): void {
-    if(authState) {
+  handleAuthState(authState: firebase.User): void {
+    if (authState) {
       this.firestore.doc<firebase.User>(`users/${authState.uid}`).valueChanges().subscribe(
         user => this.handleUserValueChanges(user),
         error => this.handleError(error),
@@ -44,10 +44,10 @@ export class AuthService extends ServiceBase {
   }
 
   handleUserValueChanges(user: firebase.User) {
-    if(user) {
+    if (user) {
       this.user = user;
       this.user$.next(this.user);
-    } 
+    }
   }
 
   googleLogin() {
@@ -59,7 +59,7 @@ export class AuthService extends ServiceBase {
     from(this.auth.auth.signInWithPopup(provider)).subscribe(
       credential => this.handleSignInResponse(credential),
       error => this.handleError(error),
-      () => `Finished handling response from signin provider.`
+      () => this.loggingService.log(this.serviceName, Severity.Information, `Finished handling response from ${provider} provider.`)
     );
   }
 
@@ -68,7 +68,7 @@ export class AuthService extends ServiceBase {
     const data = {
       uid: user.uid,
       providerId: user.providerId,
-      isAnonymous:user.isAnonymous,
+      isAnonymous: user.isAnonymous,
       displayName: user.displayName,
       email: user.email,
       emailVerified: user.emailVerified,
@@ -80,8 +80,13 @@ export class AuthService extends ServiceBase {
   }
 
   private handleSignInResponse(credential) {
-    if(credential) {
-      this.updateUser(credential.user);
+    if (credential) {
+      try {
+        this.updateUser(credential.user);
+      } catch (error) {
+        this.loggingService.log(this.serviceName, Severity.Error, `handleSignInResponse: ${error}`);
+        this.handleError(error);
+      }
     }
   }
 }

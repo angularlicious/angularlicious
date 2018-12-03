@@ -52,6 +52,9 @@
     },
     "configuration": {
       "tags": []
+    },
+    "error-handling": {
+      "tags": []
     }
   }
 }
