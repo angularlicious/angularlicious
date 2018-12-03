@@ -1,10 +1,11 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FirebaseModule, AuthService } from '@angularlicious/firebase';
 import { AngularliciousLoggingService, AngularliciousLoggingModule, LogglyWriter } from '@angularlicious/logging';
 import { ConfigurationService, ConfigurationModule } from '@angularlicious/configuration';
 import { environment } from 'apps/firebase-auth/src/environments/environment';
 import { ConsoleWriter } from 'libs/logging/src/lib/log-writers/console-writer';
+import { ErrorHandliciousService } from '@angularlicious/error-handling';
 
 export function initializeConfiguration(configService: ConfigurationService) {
   console.log(`Initializing firebase configuration from [AppModule]`);
@@ -52,7 +53,12 @@ export function initializeLogWriter(loggingService: AngularliciousLoggingService
     //   multi: true
     // },
    ConsoleWriter,
-   LogglyWriter
+   LogglyWriter,
+   {
+     provide: ErrorHandler,
+     useClass: ErrorHandliciousService,
+     deps: [ConfigurationService, AngularliciousLoggingService]
+   }
   ]
 })
 export class SharedModule {
