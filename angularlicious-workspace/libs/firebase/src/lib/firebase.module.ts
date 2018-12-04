@@ -5,8 +5,8 @@ import { AngularFireModule } from '@angular/fire'
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularliciousLoggingModule } from 'libs/logging/src';
-import { AngularliciousFoundationModule } from 'libs/foundation/src';
+import { AngularliciousLoggingModule } from '@angularlicious/logging';
+import { AngularliciousFoundationModule } from '@angularlicious/foundation';
 
 export const firebaseRoutes: Route[] = [];
 
