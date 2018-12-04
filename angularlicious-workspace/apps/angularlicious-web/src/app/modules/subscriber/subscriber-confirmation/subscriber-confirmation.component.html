@@ -1,0 +1,26 @@
+<div class="col-lg-8 col-md-12">
+  <div class="card">
+    <div class="card-block">
+      <div class="form-header">
+        <h3>
+          {{formTitle}}:</h3>
+      </div>
+      <form [formGroup]="_form" (ngSubmit)="submitForm()">
+        <buildmotion-alert [alertNotification]="alertNotification" [hasMessage]="alertNotification.showAlert"></buildmotion-alert>
+        <div class="md-form form-sm">
+          <input mdbActive type="text" id="UserName" class="form-control" formControlName="UserName">
+        </div>
+
+        <div class="md-form form-sm">
+          <input mdbActive type="text" id="ConfirmationToken" class="form-control" formControlName="ConfirmationToken">
+        </div>
+
+        <div class="text-center mt-1-half">
+          <button class="btn btn-lime" type="submit">Confirm Account</button>
+          <!-- <p>Form: {{_form.value | json}}</p>
+          <p>Form status: {{ _form.status }}</p> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

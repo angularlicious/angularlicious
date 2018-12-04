@@ -1,9 +1,0 @@
-{
-  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
-  "schematics": {
-    "titanium": {
-      "description": "A schematic collection for Angularlicious projects.",
-      "factory": "./titanium/index#titanium"
-    }
-  }
-}
