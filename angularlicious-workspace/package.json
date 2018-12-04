@@ -81,13 +81,13 @@
     "@angular/platform-browser-dynamic": "7.1.1",
     "@angular/router": "7.1.1",
     "core-js": "^2.5.4",
-    "firebase": "^5.5.9",
-    "ngx-loggly-logger": "^6.0.0",
     "rxjs": "6.3.3",
     "rxjs-compat": "6.3.3",
     "simplemde": "^1.11.2",
     "typescript-dotnet-commonjs": "^4.10.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@angular/cdk": "^7.1.0",
+    "@angular/material": "^7.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
