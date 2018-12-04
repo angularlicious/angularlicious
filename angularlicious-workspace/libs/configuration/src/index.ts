@@ -10,3 +10,5 @@ export * from './lib/configuration.service';
 
 export * from './lib/configs/logging-config';
 export * from './lib/configs/firebase-config';
+export * from './lib/configs/error-handling-config';
+export * from './lib/configs/i-error-handling-config';

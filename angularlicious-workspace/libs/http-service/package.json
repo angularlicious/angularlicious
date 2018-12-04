@@ -1,19 +1,18 @@
 {
-  "name": "@angularlicious/configuration",
+  "name": "@angularlicious/http-service",
   "version": "7.0.0",
-  "description": "Use to provide and initialize an interface-driven configuration for Angular applications.",
+  "description": "",
   "license": "MIT",
   "keywords": [
     "angular",
     "typescript",
     "angularlicious",
     "validation",
-    "javascript rules",
     "Matt Vaughn",
     "Angularlicious.com",
     "Angularlicious",
-    "Angular Configuration",
-    "configuration"
+    "Angular HTTP",
+    "http service"
   ],
   "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
   "repository": {
@@ -21,5 +20,7 @@
     "url": "git+https://github.com/angularlicious/angularlicious.git"
   },
   "peerDependencies": {
+    "@angular/common": "^7.1.1",
+    "@angular/core": "^7.1.1"
   }
 }

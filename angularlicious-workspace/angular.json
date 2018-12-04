@@ -45,7 +45,7 @@
       }
     },
     "logging": {
-      "root": "libs/logging",
+      "root": "libs/logging/src/lib",
       "sourceRoot": "libs/logging/src",
       "projectType": "library",
       "prefix": "angularlicious",
