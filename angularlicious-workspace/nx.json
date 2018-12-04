@@ -55,6 +55,12 @@
     },
     "error-handling": {
       "tags": []
+    },
+    "reference-app": {
+      "tags": []
+    },
+    "reference-app-e2e": {
+      "tags": []
     }
   }
 }
