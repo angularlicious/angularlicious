@@ -9,23 +9,23 @@ import {
 } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-
 import { BehaviorSubject } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import { HttpRequestOptions } from './models/http-request-options';
 import { HttpRequestMethod } from './models/http-request-methods.enum';
 import { Severity } from '@angularlicious/logging';
 import { AngularliciousLoggingService } from '@angularlicious/logging';
 import { ErrorResponse } from './models/error-response.model';
-import { ServiceError } from './models/service-error.model';
 import { ServiceResponse } from './models/service-response.model';
-// import { RequestMethod } from '@angular/http';
 
 /**
  * Use to create and execute HTTP service requests.
  * 1. Create HttpHeaders
  * 2. Create RequestOptions
  * 3. Execute Request
+ * 
+ * More information at: https://angular.io/guide/http
  */
 @Injectable()
 export class HttpBaseService {
@@ -129,51 +129,42 @@ export class HttpBaseService {
       requestOptions.requestUrl,
       requestOptions
     );
-    // return this.http
-    //   .request(new Request(requestOptions))
-    //   .map(response => response.json()) // maps the observable response to a JSON object;
-    //   .catch(error => this.handleHttpError(error, requestOptions)); // use to handle any exception during service call;
   }
 
   /**
    * Use to execute an HTTP [get] request using the specified url and options.
    */
-  get<ServiceResponse>(
-    requestOptions: HttpRequestOptions
-  ): Observable<ServiceResponse> {
-    requestOptions.requestMethod = HttpRequestMethod.GET;
-    const response = this.http
+  get<ServiceResponse>(requestOptions: HttpRequestOptions): Observable<ServiceResponse> 
+  {
+    requestOptions.requestMethod = HttpRequestMethod.get;
+    return this.http
       .get<ServiceResponse>(requestOptions.requestUrl, requestOptions)
-      .pipe();
-
-    return response;
+      .pipe(
+        // catchError(error => this.handleHttpError(error, requestOptions))
+      )
   }
 
   /**
    * Use to execute an HTTP [post] request using the specified url and options.
    * @param requestOptions use to define the options for the specified request.
    */
-  post<ServiceResponse>(
-    requestOptions: HttpRequestOptions
-  ): Observable<ServiceResponse> {
-    requestOptions.requestMethod = HttpRequestMethod.POST;
-    const response = this.http
-      .post<ServiceResponse>(requestOptions.requestUrl, requestOptions)
-      .pipe();
-
-    return response;
+  post<ServiceResponse>(requestOptions: HttpRequestOptions): Observable<ServiceResponse> 
+  { 
+    this.http.options
+    return this.http
+      .post<ServiceResponse>(requestOptions.requestUrl, requestOptions.body, {
+        headers: requestOptions.headers
+      })
+      .pipe(
+        // catchError(error => this.handleHttpError(error, requestOptions))
+      );
   }
 
   /**
    * Use to handle HTTP errors when calling web api(s).
    */
-  handleHttpError(
-    error: any,
-    requestOptions: HttpRequestOptions
-  ): Observable<Response> {
-    const message = `${error.toString()} ${
-      requestOptions.requestUrl
-    }, ${JSON.stringify(requestOptions.body)}`;
+  handleHttpError(error: any, requestOptions: HttpRequestOptions): Observable<ServiceResponse> {
+    const message = `${error.toString()} ${requestOptions.requestUrl}, ${JSON.stringify(requestOptions.body)}`;
     this.loggingService.log(this.serviceName, Severity.Error, message);
     if (error && error._body) {
       /**
@@ -203,13 +194,13 @@ export class HttpBaseService {
     }
   }
 
-  handleUnexpectedError(error?: Error) {
+  handleUnexpectedError(error?: Error): Observable<ServiceResponse> {
     const response = this.createErrorResponse(error);
     const subject: BehaviorSubject<any> = new BehaviorSubject(response);
     return subject.asObservable();
   }
 
-  createErrorResponse(error?: Error): ErrorResponse {
+  createErrorResponse(error?: Error): ServiceResponse {
     let message = 'Unexpected error while processing response.';
     const response: ErrorResponse = new ErrorResponse();
     if (error instanceof Error) {

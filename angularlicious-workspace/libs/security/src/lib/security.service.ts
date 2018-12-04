@@ -8,10 +8,6 @@ import {
 import { SecurityBusinessProviderService } from './business/security-business-provider.service';
 import { Subscriber } from './models/subscriber.model';
 
-// import { Subscriber } from './models/subscriber.model';
-// import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';
-// import { ConfirmationToken } from './models/confirmation-token.model';
-
 @Injectable()
 export class AngularliciousSecurityService extends ServiceBase {
   constructor(
@@ -36,15 +32,9 @@ export class AngularliciousSecurityService extends ServiceBase {
     return this.businessProvider.registerSubscriber(subscriber);
   }
 
-  // /**
-  //  * Use to confirm a new subscriber.
-  //  * @param confirmationToken contains the user name and a [Hash] value that is used to confirm the user.
-  //  */
-  // confirmSubscriber(confirmationToken: ConfirmationToken) {
-  //   this.loggingService.log(this.serviceName, Severity.Information, `Preparing to confirm subscriber.`);
-  //   return this.businessProvider.confirmSubscriber(confirmationToken)
-  // }
-
+  /**
+   * Use to verify the specified service.
+   */
   verifyService(): boolean {
     if (
       this.loggingService &&

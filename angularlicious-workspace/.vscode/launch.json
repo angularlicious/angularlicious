@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:4200",
+            "name": "Launch Angularlicious (local)",
+            "url": "http://local.angularlicio.us",
             "webRoot": "${workspaceFolder}"
         }
     ]

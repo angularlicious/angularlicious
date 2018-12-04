@@ -32,7 +32,7 @@
     "contentful": {
       "tags": []
     },
-    "test-lib": {
+    "titanium": {
       "tags": []
     },
     "component-event": {
@@ -53,13 +53,10 @@
     "configuration": {
       "tags": []
     },
-    "error-handling": {
+    "error-handlericious": {
       "tags": []
     },
-    "reference-app": {
-      "tags": []
-    },
-    "reference-app-e2e": {
+    "http-service": {
       "tags": []
     }
   }

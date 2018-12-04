@@ -224,6 +224,9 @@
               "apps/angularlicious-web/src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/angularlicious-web/src/assets/now-ui-kit/css/bootstrap.min.css",
               "apps/angularlicious-web/src/assets/now-ui-kit/css/now-ui-kit.css",
               "node_modules/simplemde/dist/simplemde.min.css",
@@ -284,6 +287,9 @@
             "tsConfig": "apps/angularlicious-web/tsconfig.spec.json",
             "karmaConfig": "apps/angularlicious-web/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/angularlicious-web/src/styles.css"
             ],
             "scripts": [],
@@ -397,30 +403,29 @@
         }
       }
     },
-    "test-lib": {
-      "root": "libs/test-lib",
-      "sourceRoot": "libs/test-lib/src",
+    "titanium": {
+      "root": "libs/titanium",
+      "sourceRoot": "libs/titanium/src",
       "projectType": "library",
-      "prefix": "angularlicious",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/test-lib/tsconfig.lib.json",
-            "project": "libs/test-lib/ng-package.json"
+            "tsConfig": "libs/titanium/tsconfig.json",
+            "project": "libs/titanium/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "libs/test-lib/ng-package.prod.json"
+              "project": "libs/titanium/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/test-lib/src/test.ts",
-            "tsConfig": "libs/test-lib/tsconfig.spec.json",
-            "karmaConfig": "libs/test-lib/karma.conf.js"
+            "main": "libs/titanium/src/test.ts",
+            "tsConfig": "libs/titanium/tsconfig.spec.json",
+            "karmaConfig": "libs/titanium/karma.conf.js"
           }
         },
         "lint": {
@@ -789,134 +794,26 @@
         }
       }
     },
-    "error-handling": {
-      "root": "libs/error-handling",
-      "sourceRoot": "libs/error-handling/src",
+    "error-handlericious": {
+      "root": "libs/error-handlericious",
+      "sourceRoot": "libs/error-handlericious/src",
       "projectType": "library",
       "prefix": "angularlicious",
       "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/error-handling/tsconfig.lib.json",
-            "project": "libs/error-handling/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "libs/error-handling/ng-package.prod.json"
-            }
-          }
-        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/error-handling/src/test.ts",
-            "tsConfig": "libs/error-handling/tsconfig.spec.json",
-            "karmaConfig": "libs/error-handling/karma.conf.js"
+            "main": "libs/error-handlericious/src/test.ts",
+            "tsConfig": "libs/error-handlericious/tsconfig.spec.json",
+            "karmaConfig": "libs/error-handlericious/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/error-handling/tsconfig.lib.json",
-              "libs/error-handling/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "reference-app": {
-      "root": "apps/reference-app/",
-      "sourceRoot": "apps/reference-app/src",
-      "projectType": "application",
-      "prefix": "angularlicious",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/reference-app",
-            "index": "apps/reference-app/src/index.html",
-            "main": "apps/reference-app/src/main.ts",
-            "polyfills": "apps/reference-app/src/polyfills.ts",
-            "tsConfig": "apps/reference-app/tsconfig.app.json",
-            "assets": [
-              "apps/reference-app/src/favicon.ico",
-              "apps/reference-app/src/assets"
-            ],
-            "styles": [
-              "apps/reference-app/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/reference-app/src/environments/environment.ts",
-                  "with": "apps/reference-app/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "reference-app:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "reference-app:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "reference-app:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "apps/reference-app/src/test.ts",
-            "polyfills": "apps/reference-app/src/polyfills.ts",
-            "tsConfig": "apps/reference-app/tsconfig.spec.json",
-            "karmaConfig": "apps/reference-app/karma.conf.js",
-            "styles": [
-              "apps/reference-app/src/styles.scss"
-            ],
-            "scripts": [],
-            "assets": [
-              "apps/reference-app/src/favicon.ico",
-              "apps/reference-app/src/assets"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/reference-app/tsconfig.app.json",
-              "apps/reference-app/tsconfig.spec.json"
+              "libs/error-handlericious/tsconfig.lib.json",
+              "libs/error-handlericious/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -947,7 +844,6 @@
         }
       }
     }
-  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
