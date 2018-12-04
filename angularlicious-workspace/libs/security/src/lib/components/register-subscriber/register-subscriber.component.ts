@@ -13,8 +13,8 @@ import {
   AngularliciousLoggingService,
   Severity
 } from '@angularlicious/logging';
-import { Subscriber } from './../../models/subscriber.model';
-import { AngularliciousSecurityService } from './../../security.service';
+import { Subscriber } from '../../models/subscriber.model';
+import { AngularliciousSecurityService } from '../../security.service';
 import { ServiceResponse, ErrorResponse } from '@angularlicious/foundation';
 
 @Component({

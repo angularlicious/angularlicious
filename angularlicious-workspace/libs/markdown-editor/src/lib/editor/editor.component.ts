@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as SimpleMDE from 'simplemde'; // MUST NPM INSTALL @types/simplemde@1.11.6
-import { MarkdownEditorOptions } from './../markdownEditorOptions';
+import { MarkdownEditorOptions } from '../markdownEditorOptions';
 
 @Component({
   // tslint:disable-next-line:component-selector

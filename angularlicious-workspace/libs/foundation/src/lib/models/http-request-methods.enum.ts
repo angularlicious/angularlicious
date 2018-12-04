@@ -1,9 +1,9 @@
 export enum HttpRequestMethod {
-  GET,
-  POST,
-  PUT,
-  DELETE,
-  OPTIONS,
-  HEAD,
-  PATCH
+  get,
+  post,
+  put,
+  delete,
+  options,
+  head,
+  patch
 }
