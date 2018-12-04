@@ -45,7 +45,7 @@
       }
     },
     "logging": {
-      "root": "libs/logging/src/lib",
+      "root": "libs/logging",
       "sourceRoot": "libs/logging/src",
       "projectType": "library",
       "prefix": "angularlicious",
@@ -821,36 +821,7 @@
           }
         }
       }
-    },
-    "http-service": {
-      "root": "libs/http-service",
-      "sourceRoot": "libs/http-service/src",
-      "projectType": "library",
-      "prefix": "angularlicious",
-      "architect": {
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/http-service/src/test.ts",
-            "tsConfig": "libs/http-service/tsconfig.spec.json",
-            "karmaConfig": "libs/http-service/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/http-service/tsconfig.lib.json",
-              "libs/http-service/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
     }
-  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
