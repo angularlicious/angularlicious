@@ -9,6 +9,7 @@
         "firebaseapp",
         "firestore",
         "loggly",
+        "ohmyz",
         "packagr",
         "presentational"
     ],
