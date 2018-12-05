@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BusinessProviderService } from './business/business-provider.service';
+import { HttpErrorApiService } from './business/http-error-api.service';
 
 @NgModule({
   declarations: [],
@@ -8,7 +9,8 @@ import { BusinessProviderService } from './business/business-provider.service';
     CommonModule
   ],
   providers: [
-    BusinessProviderService
+    BusinessProviderService,
+    HttpErrorApiService
   ],
   exports: [
   ]

@@ -3,6 +3,7 @@ import { ComponentBase, ErrorResponse } from '@angularlicious/foundation';
 import { AngularliciousLoggingService, Severity } from '@angularlicious/logging';
 import { Router } from '@angular/router';
 import { HttpErrorService } from '../../modules/cross-cutting/http-error.service';
+import { ApiResponse, ErrorApiResponse } from '@angularlicious/http-service';
 
 @Component({
   selector: 'error-handling',
@@ -36,8 +37,27 @@ export class ErrorHandlingComponent extends ComponentBase implements OnInit {
 
   createHttpError() {
     this.loggingService.log(this.componentName, Severity.Information, ``, ['cross-cutting-concerns', 'http-error', 'component'])
-    this.httpErrorService.createHttpError(this.componentName)    
+    this.httpErrorService.createHttpError(this.componentName).subscribe(
+      response => this.handleCreateHttpError(response),
+      error => this.handleServiceErrors(error),
+      () => this.finishRequest(`Finished request for creating an HTTP error.`)
+    )
   }
 
-  
+  createHttpApiError() {
+    this.loggingService.log(this.componentName, Severity.Information, ``, ['cross-cutting-concerns', 'http-error', 'component'])
+    this.httpErrorService.createHttpApiError(this.componentName).subscribe(
+      response => this.handleCreateHttpError(response),
+      error => this.handleServiceErrors(error),
+      () => this.finishRequest(`Finished request for creating an HTTP error.`)
+    )
+  }
+
+  private handleCreateHttpError(response: ApiResponse<string>) {
+    if(response) {
+      if(!response.IsSuccess) {
+        this.handleServiceErrors(null, this.httpErrorService.serviceContext)
+      } 
+    }
+  }
 }

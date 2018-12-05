@@ -8,7 +8,7 @@ import {
 } from '@angular/common/http';
 import { HttpRequestOptions } from './http-request-options';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, retry } from 'rxjs/operators';
 import { ApiResponse } from './api-response';
 import { ErrorApiResponse } from './error-api-response';
 import { ApiErrorMessage } from './api-error-message';
