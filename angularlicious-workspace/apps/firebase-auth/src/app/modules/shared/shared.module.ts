@@ -5,7 +5,7 @@ import { AngularliciousLoggingService, AngularliciousLoggingModule, LogglyWriter
 import { ConfigurationService, ConfigurationModule } from '@angularlicious/configuration';
 import { environment } from 'apps/firebase-auth/src/environments/environment';
 import { ConsoleWriter } from 'libs/logging/src/lib/log-writers/console-writer';
-import { ErrorHandlericiousModule, ErrorHandliciousService } from '@angularlicious/error-handlericious';
+import { ErrorHandlingModule, ErrorHandliciousService } from '@angularlicious/error-handling';
 
 /**
  * The factory function to initialize the configuration service for the application.
