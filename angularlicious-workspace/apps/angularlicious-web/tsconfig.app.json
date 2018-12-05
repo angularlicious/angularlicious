@@ -1,0 +1,41 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc/apps/angularlicious-web",
+    "module": "es2015",
+    "types": []
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ],
+  "include": [
+    "**/*.ts"
+  ],
+  "paths": {
+    "@angularlicious/logging": [
+      "libs/logging/src/index.ts"
+    ],
+    "@angularlicious/rules-engine": [
+      "libs/rule-engine/index.ts"
+    ],
+    "@angularlicious/actions": [
+      "libs/actions/src/index.ts"
+    ],
+    "@angularlicious/foundation": [
+      "libs/foundation/src/index.ts"
+    ],
+    "@angularlicious/core": [
+      "libs/core/src/index.ts"
+    ],
+    "@angularlicious/security": [
+      "libs/security/src/index.ts"
+    ],
+    "@angularlicious/markdown-editor": [
+      "libs/markdown-editor/src/index.ts"
+    ],
+    "@angularlicious/contentful": [
+      "libs/contentful/src/index.ts"
+    ]
+  }
+}

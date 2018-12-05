@@ -1,0 +1,41 @@
+<button class="btn btn-primary" data-toggle="modal" data-target="#staticModal">
+    <ng-content select="[button-text]"></ng-content>
+</button>
+<!-- APPLICATION MODAL DIALOG -->
+<div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                </button>
+                <!-- <h4 class="title title-up">Modal title</h4> -->
+                <ng-content select="[title]"></ng-content>
+            </div>
+            <div class="modal-body">
+                <ng-content select="[body]"></ng-content>
+                <form [formGroup]="_form" (ngSubmit)="submitForm()">
+                    <div class="md-form form-sm">
+                        <i class="fa fa-lock prefix"></i>
+                        <!-- <input type="text" id="name" class="form-control" formControlName="FriendlyName" maxlength="30"> -->
+                        <input mdbActive type="text" formControlName="subscriberName" id="subscriberName" class="form-control">
+                        <label for="form27">Your name</label>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input mdbActive type="text" id="emailAddress" formControlName="emailAddress" class="form-control">
+                        <label for="form28">Your email</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="submit" class="btn btn-danger" data-dismiss="modal"> -->
+                <button type="submit" class="btn btn-danger" (click)="submitForm()" data-dismiss="modal">
+                    <ng-content select="[button-submit-text]"></ng-content>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- APPLICATION MODAL DIALOG -->
