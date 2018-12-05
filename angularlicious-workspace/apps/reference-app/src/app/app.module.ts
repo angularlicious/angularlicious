@@ -40,8 +40,7 @@ import { SharedModule } from './modules/shared/shared.module';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-
+    AdminLayoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

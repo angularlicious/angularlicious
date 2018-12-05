@@ -1,9 +1,11 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CrossCuttingModule } from '../cross-cutting/cross-cutting.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    CrossCuttingModule
   ],
   declarations: []
 })
