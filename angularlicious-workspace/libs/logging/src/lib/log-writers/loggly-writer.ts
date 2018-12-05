@@ -19,20 +19,20 @@ export class LogglyWriter extends LogWriter {
     if (
       this.configService && this.loggingService
     ) {
-      this.configService.settings$.subscribe( settings => this.handleSettings(settings));
+      this.configService.settings$.subscribe(settings => this.handleSettings(settings));
       this.loggingService.logEntries$.subscribe(entry => this.handleLogEntry(entry));
     }
   }
 
   handleSettings(settings: IConfiguration) {
-    if(settings) {
+    if (settings) {
       this.hasWriter = true;
       this.logglyConfig = settings.loggly;
     }
   }
 
   handleLogEntry(entry: ILogEntry) {
-    if(this.hasWriter) {
+    if (this.hasWriter) {
       this.targetEntry = entry;
       this.execute();
     }
@@ -50,14 +50,18 @@ export class LogglyWriter extends LogWriter {
    */
   public setup(): void {
     if (this.hasWriter) {
-      this.loggly.push({
-        logglyKey: this.logglyConfig.apiKey,
-        sendConsoleErrors: this.logglyConfig.sendConsoleErrors
-      });
-
-      if (this.targetEntry.tags && this.targetEntry.tags.length > 0) {
-        const tags = this.targetEntry.tags.join(',');
-        this.loggly.push({ tag: tags });
+      try {
+        this.loggly.push({
+          logglyKey: this.logglyConfig.apiKey,
+          sendConsoleErrors: this.logglyConfig.sendConsoleErrors
+        });
+  
+        if (this.targetEntry.tags && this.targetEntry.tags.length > 0) {
+          const tags = this.targetEntry.tags.join(',');
+          this.loggly.push({ tag: tags });
+        }
+      } catch (error) {
+        const message = `${this.targetEntry.application}.LogglyWriter: ${{...error}}`;
       }
     }
   }
@@ -79,8 +83,8 @@ export class LogglyWriter extends LogWriter {
   formatEntry(logEntry: ILogEntry): string {
     return `application:${logEntry.application}; source:${
       logEntry.source
-    }; timestamp:${logEntry.timestamp.toUTCString()}; message:${
+      }; timestamp:${logEntry.timestamp.toUTCString()}; message:${
       logEntry.message
-    }`;
+      }`;
   }
 }
