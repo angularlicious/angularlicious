@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsTitanium",
+    "title": "Angularlicious Titanium Options Schema",
+    "type": "object",
+    "properties": {
+      "directory": {
+        "type": "string",
+        "description": "The directory name to create the workspace in."
+      },
+      "name": {
+        "description": "The name of the workspace.",
+        "type": "string",
+        "format": "html-selector",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        }
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "additionalProperties": false
+  }
+  

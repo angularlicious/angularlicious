@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Audio-Technica AT2020 USB Mic",
+        "title": "Audio-Technica AT2020USB+ Cardioid Condenser USB Microphone, Black",
+        "imageUrl": "<a href=\"https://www.amazon.com/Audio-Technica-AT2020USB-Cardioid-Condenser-Microphone/dp/B00B5ZX9FM/ref=as_li_ss_il?s=musical-instruments&ie=UTF8&qid=1514599246&sr=1-4&keywords=audio+technica+at2020&linkCode=li3&tag=angularliciou-20&linkId=8e9afd35baf932d897241bdd2b161c36\" target=\"_blank\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00B5ZX9FM&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=angularliciou-20\" ></a><img src=\"https://ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=li3&o=1&a=B00B5ZX9FM\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2CmCPem",
+        "description": "Combining high-resolution audio with increased connectivity options, the AT2020USBi cardioid condenser microphone adds a new level of sound-quality and convenience to the expanding lineup of Audio-Technica USB microphones. Modeled after the critically acclaimed AT2020, this digital output mic features an A/D converter with a 24-bit/96 kHz sampling rate to deliver high-resolution articulation and intelligibility that’s perfect for home studio recording, field recording, podcasting and voiceover use.",
+        "price": 149
+    },
+    {
+        "id": 2,
+        "name": "Steinberg Cubase Pro 9",
+        "title": "Steinberg Cubase Pro 9 Recording Software, Professional",
+        "imageUrl": "<a href=\"https://www.amazon.com/Steinberg-Cubase-Recording-Software-Professional/dp/B01NAGPPFI/ref=as_li_ss_il?s=musical-instruments&ie=UTF8&qid=1514599326&sr=1-2&keywords=CUBASE+PRO+9&linkCode=li3&tag=angularliciou-20&linkId=db274a34a2d1b7772d5d6266aca4fcd8\" target=\"_blank\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01NAGPPFI&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=angularliciou-20\" ></a><img src=\"https://ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=li3&o=1&a=B01NAGPPFI\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2CcRTMA",
+        "description": "Covering all stages of the creative process from composing, recording, editing and mixing, Cubase excels with intelligent tools and features that put creativity first. Offering maximum flexibility, Cubase does not impose a certain workflow onto you, but provides the freedom you need to push your creative envelope.",
+        "price": 579
+    },
+    {
+        "id": 3,
+        "name": "Mackie Mix 8",
+        "title": "Mackie Mix Series Mix8 8-Channel Mixer",
+        "imageUrl": "<a href=\"https://www.amazon.com/Mackie-Mix-Mix8-8-Channel-Mixer/dp/B00ND1KGEI/ref=as_li_ss_il?s=musical-instruments&ie=UTF8&qid=1514599402&sr=1-2&keywords=MACKIE+8&linkCode=li3&tag=angularliciou-20&linkId=6d6cfbb8c1f82dc1e90c3255556ea162\" target=\"_blank\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00ND1KGEI&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=angularliciou-20\" ></a><img src=\"https://ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=li3&o=1&a=B00ND1KGEI\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2EgDJam",
+        "description": "Mackie Mix Compact Mixers deliver the quality you expect from the world leader in compact mixer design. The professional and affordable Mix Series mixers feature high quality components, a rugged metal chassis and features designed for a variety of applications. With Mackie preamps and proven high-headroom, low-noise design, Mix delivers great sound from any source.",
+        "price": 74.99
+    },
+    {
+        "id": 4,
+        "name": "Audacity Book",
+        "title": "Audacity Audio Recorder and Editor",
+        "imageUrl": "<a target=\"_blank\"  href=\"https://www.amazon.com/gp/product/3959828292/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=3959828292&linkCode=as2&tag=angularliciou-20&linkId=d7f4b0b8b895613302d66054386c5c4d\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=3959828292&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=angularliciou-20\" ></a><img src=\"//ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=am2&o=1&a=3959828292\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2Dy1v0v",
+        "description": "Audacity® is free, open source, cross-platform audio software for multi-track recording and editing.",
+        "price": 12.99
+    },
+    {
+        "id": 5,
+        "name": "Steinberg Digital/Audio Interface",
+        "title": "Steinberg UR22MKII 2-Channel USB Interface",
+        "imageUrl": "<a target=\"_blank\"  href=\"https://www.amazon.com/gp/product/B017MVUAHM/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B017MVUAHM&linkCode=as2&tag=angularliciou-20&linkId=f19f08d550bac6c7575ff193d5ca332c\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B017MVUAHM&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=angularliciou-20\" ></a><img src=\"//ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=am2&o=1&a=B017MVUAHM\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2Cia2I5",
+        "description": "Your professional sound studio for recording, editing and playing all common audio files. Create live recordings, digitalize your cassettes and records. Comprehensive range of tools, mix any number of tracks and add sound effects. For Windows 10, 8, 7 or Vista (32/64 bit) and Mac.",
+        "price": 119
+    },
+    {
+        "id": 6,
+        "name": "Audio-Technica AT2035 Mic",
+        "title": "Audio-Technica AT2035 Large Diaphragm Studio Condenser Microphone",
+        "imageUrl": "<a href=\"https://www.amazon.com/Audio-Technica-AT2035-Diaphragm-Condenser-Microphone/dp/B00D6RMFG6/ref=as_li_ss_il?s=musical-instruments&ie=UTF8&qid=1514600532&sr=1-1-spell&keywords=AUDIO-TECHNICA+2035+CARDIOID+CONDENSOR+MICROPHONE&linkCode=li3&tag=angularliciou-20&linkId=1adf709794e35fc5f0be1aac7767b48f\" target=\"_blank\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00D6RMFG6&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=angularliciou-20\" ></a><img src=\"https://ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=li3&o=1&a=B00D6RMFG6\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2Eg66G2",
+        "description": "Designed for critical home/project/professional studio applications and live performance, this side-address cardioid studio condenser delivers exceptional detail and low noise. Equipped with a switchable 80 Hz high-pass filter and 10 dB pad, the AT2035 handles high sound pressure levels with ease. Along with its rugged construction and high-performance specifications, the AT2035 provides an exceptional level of consistency from model to model. It comes equipped with a protective pouch and a custom shock mount.",
+        "price": 159
+    },
+    {
+        "id": 7,
+        "name": "JBO Pro Studio Monitors",
+        "title": "JBL LSR305 Professional Studio Monitor (PACK OF 2)",
+        "imageUrl": "<a href=\"https://www.amazon.com/gp/product/B00DUKP37C/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=angularliciou-20&linkId=b97b3a3ca5c79ffbc07ed00d9412f73b\" target=\"_blank\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00DUKP37C&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=angularliciou-20\" ></a><img src=\"https://ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=li3&o=1&a=B00DUKP37C\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2Dzyj9E",
+        "description": "Bi-amplified Studio Monitor with Magnetically-Shielded 5” Low Frequency Transducer and 1” Soft-Dome High Frequency Transducer and Image Control Wave Guide. Class-D 41 Watt RMS Amplifier for LF, and 41 Watt RMS Amplifier for HF. Balanced XLR and ¼” TRS Inputs with Detented Level Control, HF and LF Trim Controls. LSR305 Includes US Power Cord. LSR305/230 Includes international Power Cord",
+        "price": 269
+    },
+    {
+        "id": 8,
+        "name": "AKG Headphones",
+        "title": "AKG K 553 Pro Headphones",
+        "imageUrl": "<a href=\"https://www.amazon.com/AKG-3280H00100-K-553-Pro/dp/B00X3MT7F6/ref=as_li_ss_il?s=musical-instruments&ie=UTF8&qid=1514599102&sr=8-1&keywords=AKG+K553+PRO&linkCode=li3&tag=angularliciou-20&linkId=93150c51335ca95c177f3b08df8054d3\" target=\"_blank\"><img border=\"0\" src=\"//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00X3MT7F6&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=angularliciou-20\" ></a><img src=\"https://ir-na.amazon-adsystem.com/e/ir?t=angularliciou-20&l=li3&o=1&a=B00X3MT7F6\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"border:none !important; margin:0px !important;\" />",
+        "textUrl": "http://amzn.to/2BUY83x",
+        "description": "The K553 PRO's are closed-back, over-ear studio headphones for monitoring, mixing and mastering. Their unique performance results from the perfect balance between the noise-isolating qualities of a closed-back headphones and the spacious, dimensional sound of an open-back design. The 50mm drivers provide a strong, yet accurate and distinguished bass response as needed for monitoring and mastering contemporary music. The extra large, soft ear pads ensure stress free listening over hours and the 2D-axis mechanism enables full flat folding for easy storage or handling on the road. With its low impedance drivers the K553 PRO is sensitive enough to also be used on laptops and mobile devices, so the soft high quality cable is equipped with a 3.5mm (1/8”) plug. A screw on adapter to 6.3mm (1/4”) is included.",
+        "price": 158
+    }
+]

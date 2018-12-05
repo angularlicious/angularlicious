@@ -1,0 +1,21 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+  <app-landing-intro>
+    <h1 title>Angularlicious Events</h1>
+  </app-landing-intro>
+  <div class="main">
+    <app-article *ngIf="!hasEvents">
+      <h2 title>No Events...</h2>
+    </app-article>
+    <app-article *ngFor="let e of events">
+      <h2 title>{{e.title}}</h2>
+      <ul body>
+        <li><b>Location</b>: {{e.location}}</li>
+        <li><b>Date/Time</b>: {{e.dateTime}}</li>
+        <li><b>Details</b>: {{e.details}}</li>
+      </ul>
+      <button body (click)="goToEvent(e.link)" class="btn btn-primary btn-lg btn-round">MORE INFO...</button>
+    </app-article>
+  </div>
+  <app-footer></app-footer>
+</div>

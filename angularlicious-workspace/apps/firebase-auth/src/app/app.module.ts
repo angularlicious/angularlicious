@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
