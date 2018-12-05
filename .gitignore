@@ -1,7 +1,6 @@
 
 angularlicious-workspace/node_modules/
-resources/contentful/javascript/
-resources/contentful/javascript\.zip
+resources/
 angularlicious-workspace99/
 angularlicious-workspace/libs/titanium/node_modules/*
 angularlicious-workspace/apps/firebase-auth/src/assets/config/
