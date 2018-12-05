@@ -18,16 +18,19 @@ import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
+
 import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    SharedModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
