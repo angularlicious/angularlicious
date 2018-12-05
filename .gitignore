@@ -7,3 +7,5 @@ angularlicious-workspace/apps/firebase-auth/src/assets/config/
 angularlicious-workspace/libs/firebase/src/lib/firebaseConfig\.json
 angularlicious-workspace/version\.js
 angularlicious-workspace/apps/reference-app/src/assets/configuration.json
+angularlicious-workspace/apps/reference-app/src/assets/config/configuration.production.json
+angularlicious-workspace/apps/reference-app/src/assets/config/configuration.development.json
