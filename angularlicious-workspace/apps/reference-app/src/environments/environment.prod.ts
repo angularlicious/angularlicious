@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  name: 'production',
+  application: 'angularlicious-reference',
+  production: true,
+  appConfig: '../assets/config/configuration.development.json'
 };
