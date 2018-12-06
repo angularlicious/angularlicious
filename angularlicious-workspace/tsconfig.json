@@ -37,8 +37,8 @@
       "@angularlicious/configuration": [
         "libs/configuration/src/index.ts"
       ],
-      "@angularlicious/error-handlericious": [
-        "libs/error-handlericious/src/index.ts"
+      "@angularlicious/error-handling": [
+        "libs/error-handling/src/index.ts"
       ],
       "http-service/*": [
         "dist/http-service/*"
