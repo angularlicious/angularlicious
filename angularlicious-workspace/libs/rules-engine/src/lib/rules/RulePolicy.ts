@@ -71,7 +71,6 @@ export class RulePolicy implements IRuleComponent {
    * pipeline.
    */
   execute(): RuleResult {
-    console.log('Begin execution of RulePolicy: ' + this.name);
     return this.render();
   }
 

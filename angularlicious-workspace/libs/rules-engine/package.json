@@ -1,6 +1,6 @@
 {
   "name": "@angularlicious/rules-engine",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "A serious rule engine for Javascript applications. Perfect for Angular applications. Build something amazing!",
   "license": "MIT",
   "keywords": [
@@ -17,7 +17,7 @@
     "Angularlicious.com",
     "Angularlicio.us"
   ],
-  "author": "Matt Vaughn",
+  "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angularlicious/angularlicious.git"

@@ -1,6 +1,6 @@
 {
   "name": "@angularlicious/core",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "An Angular custom library that contains core application items for Angularlicious Angular applications.",
   "keywords": [
     "Angular",
@@ -10,18 +10,18 @@
     "@angularlicious",
     "#Angularlicious"
   ],
-  "author": "Matt Vaughn",
+  "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angularlicious/angularlicious.git"
   },
   "peerDependencies": {
-    "@angular/http": "^6.0.7",
-    "@angular/router": "^6.0.7",
+    "@angular/http": "^7.1.1",
+    "@angular/router": "^7.1.1",
     "@types/google.analytics": "0.0.36",
-    "@angularlicious/actions": "^6.0.0",
-    "@angularlicious/rule-engine": "^6.0.0"
+    "@angularlicious/actions": "^7.0.0",
+    "@angularlicious/rule-engine": "^7.0.0"
   },
   "main": "bundles/angularlicious-core.umd.js",
   "module": "fesm5/angularlicious-core.js",

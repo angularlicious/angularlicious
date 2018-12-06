@@ -8,7 +8,10 @@
         "contentful",
         "firebaseapp",
         "firestore",
+        "handlericious",
         "loggly",
+        "lukka",
+        "ohmyz",
         "packagr",
         "presentational"
     ],

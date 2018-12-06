@@ -1,6 +1,6 @@
 {
   "name": "@angularlicious/actions",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "@angularlicious/actions is a framework to build amazing business logic. It compliments the @angularlicious/rules-engine.",
   "license": "MIT",
   "keywords": [
@@ -16,13 +16,13 @@
     "Angularlicious.com",
     "Angularlicious"
   ],
-  "author": "Matt Vaughn",
+  "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angularlicious/angularlicious.git"
   },
   "peerDependencies": {
-    "@angularlicious/rules-engine": "^6.0.0"
+    "@angularlicious/rules-engine": "^7.0.0"
   },
   "main": "bundles/angularlicious-actions.umd.js",
   "module": "fesm5/angularlicious-actions.js",

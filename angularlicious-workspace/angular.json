@@ -37,9 +37,7 @@
               "libs/actions/tsconfig.lib.json",
               "libs/actions/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -77,9 +75,7 @@
               "libs/logging/tsconfig.lib.json",
               "libs/logging/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -117,9 +113,7 @@
               "libs/rules-engine/tsconfig.lib.json",
               "libs/rules-engine/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -157,9 +151,7 @@
               "libs/core/tsconfig.lib.json",
               "libs/core/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -197,9 +189,7 @@
               "libs/markdown-editor/tsconfig.lib.json",
               "libs/markdown-editor/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -224,6 +214,9 @@
               "apps/angularlicious-web/src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/angularlicious-web/src/assets/now-ui-kit/css/bootstrap.min.css",
               "apps/angularlicious-web/src/assets/now-ui-kit/css/now-ui-kit.css",
               "node_modules/simplemde/dist/simplemde.min.css",
@@ -284,6 +277,9 @@
             "tsConfig": "apps/angularlicious-web/tsconfig.spec.json",
             "karmaConfig": "apps/angularlicious-web/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "apps/angularlicious-web/src/styles.css"
             ],
             "scripts": [],
@@ -300,9 +296,7 @@
               "apps/angularlicious-web/tsconfig.app.json",
               "apps/angularlicious-web/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -322,9 +316,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/angularlicious-web-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -350,9 +342,7 @@
               "libs/contentful/tsconfig.lib.json",
               "libs/contentful/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -390,37 +380,34 @@
               "libs/foundation/tsconfig.lib.json",
               "libs/foundation/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "test-lib": {
-      "root": "libs/test-lib",
-      "sourceRoot": "libs/test-lib/src",
+    "titanium": {
+      "root": "libs/titanium",
+      "sourceRoot": "libs/titanium/src",
       "projectType": "library",
-      "prefix": "angularlicious",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/test-lib/tsconfig.lib.json",
-            "project": "libs/test-lib/ng-package.json"
+            "tsConfig": "libs/titanium/tsconfig.json",
+            "project": "libs/titanium/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "libs/test-lib/ng-package.prod.json"
+              "project": "libs/titanium/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/test-lib/src/test.ts",
-            "tsConfig": "libs/test-lib/tsconfig.spec.json",
-            "karmaConfig": "libs/test-lib/karma.conf.js"
+            "main": "libs/titanium/src/test.ts",
+            "tsConfig": "libs/titanium/tsconfig.spec.json",
+            "karmaConfig": "libs/titanium/karma.conf.js"
           }
         },
         "lint": {
@@ -430,9 +417,7 @@
               "libs/test-lib/tsconfig.lib.json",
               "libs/test-lib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -470,9 +455,7 @@
               "libs/security/tsconfig.lib.json",
               "libs/security/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -496,9 +479,7 @@
               "apps/component-event/src/favicon.ico",
               "apps/component-event/src/assets"
             ],
-            "styles": [
-              "apps/component-event/src/styles.css"
-            ],
+            "styles": ["apps/component-event/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -545,9 +526,7 @@
             "polyfills": "apps/component-event/src/polyfills.ts",
             "tsConfig": "apps/component-event/tsconfig.spec.json",
             "karmaConfig": "apps/component-event/karma.conf.js",
-            "styles": [
-              "apps/component-event/src/styles.css"
-            ],
+            "styles": ["apps/component-event/src/styles.css"],
             "scripts": [],
             "assets": [
               "apps/component-event/src/favicon.ico",
@@ -562,9 +541,7 @@
               "apps/component-event/tsconfig.app.json",
               "apps/component-event/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -584,9 +561,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/component-event-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -614,9 +589,7 @@
               "apps/firebase-auth/src/favicon.ico",
               "apps/firebase-auth/src/assets"
             ],
-            "styles": [
-              "apps/firebase-auth/src/styles.scss"
-            ],
+            "styles": ["apps/firebase-auth/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -663,9 +636,7 @@
             "polyfills": "apps/firebase-auth/src/polyfills.ts",
             "tsConfig": "apps/firebase-auth/tsconfig.spec.json",
             "karmaConfig": "apps/firebase-auth/karma.conf.js",
-            "styles": [
-              "apps/firebase-auth/src/styles.scss"
-            ],
+            "styles": ["apps/firebase-auth/src/styles.scss"],
             "scripts": [],
             "assets": [
               "apps/firebase-auth/src/favicon.ico",
@@ -680,9 +651,7 @@
               "apps/firebase-auth/tsconfig.app.json",
               "apps/firebase-auth/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -702,9 +671,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/firebase-auth-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -742,9 +709,7 @@
               "libs/firebase/tsconfig.lib.json",
               "libs/firebase/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -782,60 +747,168 @@
               "libs/configuration/tsconfig.lib.json",
               "libs/configuration/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "error-handling": {
-      "root": "libs/error-handling",
-      "sourceRoot": "libs/error-handling/src",
+    "error-handlericious": {
+      "root": "libs/error-handlericious",
+      "sourceRoot": "libs/error-handlericious/src",
       "projectType": "library",
       "prefix": "angularlicious",
       "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/error-handling/tsconfig.lib.json",
-            "project": "libs/error-handling/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "libs/error-handling/ng-package.prod.json"
-            }
-          }
-        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/error-handling/src/test.ts",
-            "tsConfig": "libs/error-handling/tsconfig.spec.json",
-            "karmaConfig": "libs/error-handling/karma.conf.js"
+            "main": "libs/error-handlericious/src/test.ts",
+            "tsConfig": "libs/error-handlericious/tsconfig.spec.json",
+            "karmaConfig": "libs/error-handlericious/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/error-handling/tsconfig.lib.json",
-              "libs/error-handling/tsconfig.spec.json"
+              "libs/error-handlericious/tsconfig.lib.json",
+              "libs/error-handlericious/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "reference-app": {
+      "root": "apps/reference-app/",
+      "sourceRoot": "apps/reference-app/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "apps/reference-app/src/index.html",
+            "main": "apps/reference-app/src/main.ts",
+            "tsConfig": "apps/reference-app/tsconfig.app.json",
+            "polyfills": "apps/reference-app/src/polyfills.ts",
+            "assets": [
+              "apps/reference-app/src/assets",
+              "apps/reference-app/src/favicon.ico"
+            ],
+            "styles": [
+              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+              "apps/reference-app/src/assets/scss/material-dashboard.scss",
+              "apps/reference-app/src/assets/css/demo.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
+              "node_modules/arrive/src/arrive.js",
+              "node_modules/moment/moment.js",
+              "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
+              "node_modules/bootstrap-notify/bootstrap-notify.js",
+              "node_modules/chartist/dist/chartist.js"
             ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/reference-app/src/environments/environment.ts",
+                  "with": "apps/reference-app/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "reference-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "material-dashboard-angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "material-dashboard-angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
+              "node_modules/arrive/src/arrive.js",
+              "node_modules/moment/moment.js",
+              "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
+              "node_modules/bootstrap-notify/bootstrap-notify.js",
+              "node_modules/chartist/dist/chartist.js"
+            ],
+            "styles": [
+              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+              "src/assets/scss/material-dashboard.scss",
+              "src/assets/css/demo.css"
+            ],
+            "assets": ["src/assets", "src/favicon.ico"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": []
+          }
+        }
+      }
+    },
+    "reference-app-e2e": {
+      "root": "apps/reference-app-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/reference-app-e2e/protractor.conf.js",
+            "devServerTarget": "reference-app:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/reference-app-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
   },
+  "defaultProject": "reference-web",
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
       "versionMismatch": false
     },
     "defaultCollection": "@nrwl/schematics"
-  },
-  "defaultProject": "actions"
+  }
 }

@@ -1,0 +1,26 @@
+{
+  "name": "@angularlicious/http-service",
+  "version": "7.0.0",
+  "description": "",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "typescript",
+    "angularlicious",
+    "validation",
+    "Matt Vaughn",
+    "Angularlicious.com",
+    "Angularlicious",
+    "Angular HTTP",
+    "http service"
+  ],
+  "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^7.1.1",
+    "@angular/core": "^7.1.1"
+  }
+}

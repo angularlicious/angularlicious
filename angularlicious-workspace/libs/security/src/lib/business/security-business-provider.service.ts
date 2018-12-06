@@ -8,7 +8,7 @@ import {
   AngularliciousLoggingService
 } from '@angularlicious/logging';
 import { RegisterSubscriberAction } from './actions/register-subscriber.action';
-import { Subscriber } from './../models/subscriber.model';
+import { Subscriber } from '../models/subscriber.model';
 import { SecurityApiService } from './security-api.service';
 
 @Injectable()

@@ -39,6 +39,12 @@
       ],
       "@angularlicious/error-handling": [
         "libs/error-handling/src/index.ts"
+      ],
+      "http-service/*": [
+        "dist/http-service/*"
+      ],
+      "@angularlicious/http-service": [
+        "libs/http-service/src/index.ts"
       ]
     }
   },
