@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ErrorHandlingConfig } from 'libs/configuration/src/lib/configs/error-handling-config';
+import { ErrorHandlingConfig } from '@angularlicious/configuration';
 
 @NgModule({
   imports: [CommonModule]

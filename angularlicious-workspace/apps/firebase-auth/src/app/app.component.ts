@@ -25,14 +25,14 @@ export class AppComponent implements OnInit {
     private authService: AuthService,
     private logger: AngularliciousLoggingService,
     router: Router
-    ) {
+  ) {
   }
 
   ngOnInit(): void {
     this.logger.log('AppComponent', Severity.Information, `Preparing to subscribe to configuration settings.`)
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.configService.settings$.subscribe(config =>  this.handleConfig(config));
+    this.configService.settings$.subscribe(config => this.handleConfig(config));
 
     this.user$ = this.authService.user$.subscribe(
       user => this.user = user
@@ -40,11 +40,10 @@ export class AppComponent implements OnInit {
   }
 
   handleConfig(config: IConfiguration) {
-   this.config = config;
+    this.config = config;
 
-   this.logger.log('AppComponent', Severity.Warning, `Preparing to show my key...`, [`${this.config.logging.applicationName},"AppComponent"`]);
-  //  this.title = this.config.firebase.apiKey;
-  this.title = this.configService.settings.firebase.apiKey;
+    this.logger.log('AppComponent', Severity.Warning, `Preparing to show my key...`, [`${this.config.logging.applicationName},"AppComponent"`]);
+    this.title = this.configService.settings.firebase.apiKey;
   }
 
   loginWithGoogle() {

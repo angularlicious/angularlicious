@@ -1,16 +1,16 @@
 import { async, TestBed } from '@angular/core/testing';
-import { TestLibModule } from './test-lib.module';
+import { ErrorHandlingModule } from './error-handling.module';
 
-describe('TestLibModule', () => {
+describe('ErrorHandlingModule', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        imports: [TestLibModule]
+        imports: [ErrorHandlingModule]
       }).compileComponents();
     })
   );
 
   it('should create', () => {
-    expect(TestLibModule).toBeDefined();
+    expect(ErrorHandlingModule).toBeDefined();
   });
 });

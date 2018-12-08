@@ -1,0 +1,24 @@
+{
+  "name": "@angularlicious/error-handlericious",
+  "version": "7.0.0",
+  "description": "An error handler that handles core Javascript and Angular HTTP response errors. Contains configuration to allow for default Angular error handling side-by-side.",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "typescript",
+    "business rules",
+    "angularlicious",
+    "Matt Vaughn",
+    "Angularlicious.com",
+    "Angularlicious",
+    "error handling",
+    "HttpErrorResponse"
+  ],
+  "author": "matt.vaughn@angularlicious.com www.angularlicio.us",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angularlicious/angularlicious.git"
+  },
+  "peerDependencies": {
+  }
+}

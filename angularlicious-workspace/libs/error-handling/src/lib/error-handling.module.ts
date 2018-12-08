@@ -3,4 +3,4 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   imports: [CommonModule]
 })
-export class TestLibModule {}
+export class ErrorHandlingModule {}

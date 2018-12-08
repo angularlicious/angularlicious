@@ -55,6 +55,9 @@
     },
     "error-handlericious": {
       "tags": []
+    },
+    "http-service": {
+      "tags": []
     }
   }
 }

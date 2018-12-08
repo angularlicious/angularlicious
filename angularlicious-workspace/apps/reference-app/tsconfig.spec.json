@@ -1,14 +1,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/libs/test-lib",
+    "outDir": "../../dist/out-tsc/apps/reference-app",
+    "module": "commonjs",
     "types": [
       "jasmine",
       "node"
     ]
   },
   "files": [
-    "src/test.ts"
+    "src/test.ts",
+    "src/polyfills.ts"
   ],
   "include": [
     "**/*.spec.ts",
