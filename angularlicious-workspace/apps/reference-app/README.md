@@ -1,5 +1,7 @@
 # Angularlicious Reference App
 
+![](./assets/reference-app.png)
+
 The purpose of this application is to demonstrate the use of the Angularlicious libraries/packages. 
 
 * Cross-Cutting Concerns
