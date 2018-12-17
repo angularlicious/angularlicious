@@ -1,0 +1,20 @@
+{
+    "logging": {
+        "applicationName": "angularlicious",
+        "version": "1.0.0",
+        "isProduction": false
+    },
+    "errorHandling": {
+        "name": "Angularlicious",
+        "includeDefaultErrorHandling": true
+    },
+    "loggly": {
+        "apiKey": "028ec8de-487f-4f6a-be4e-a7a3c0e3ae20",
+        "sendConsoleErrors": true
+    },
+    "firebase": {},
+    "contentful": {
+        "spaceId": "8d82gs442h2g",
+        "token": "8538d5457bcb57d9f1209f201ebf0e74025dd1f7618fa881449dcdf81a2c2002"
+    }
+}

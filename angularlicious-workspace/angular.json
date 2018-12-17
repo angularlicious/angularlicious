@@ -882,15 +882,18 @@
         }
       }
     },
-    "reference-app-e2e": {
-      "root": "apps/reference-app-e2e/",
-      "projectType": "application",
+    "http-service": {
+      "root": "libs/http-service",
+      "sourceRoot": "libs/http-service/src",
+      "projectType": "library",
+      "prefix": "angularlicious",
       "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "protractorConfig": "apps/reference-app-e2e/protractor.conf.js",
-            "devServerTarget": "reference-app:serve"
+            "main": "libs/http-service/src/test.ts",
+            "tsConfig": "libs/http-service/tsconfig.spec.json",
+            "karmaConfig": "libs/http-service/karma.conf.js"
           }
         },
         "lint": {
