@@ -35,6 +35,7 @@ The following goals need to be achieved using a well-defined, safe, and conventi
 Use the following instructions to create a repository that is a fork from a public repository. In our scenario, we have a private Azure DevOps repository that is configured with upstream remotes for (pull/fetch) operations.
 
 >More information at: https://help.github.com/articles/fork-a-repo/
+> https://help.github.com/articles/configuring-a-remote-for-a-fork/
 
 ### Sync From a Remote Upstream
 We will use the `git fetch` command to get updates from the remote upstream. The `fetch` operation will bring down all updates to the local upstream branch. In order to get the changes in to the local branch/repository, you will have to perform a `merge` as described later.
@@ -55,7 +56,7 @@ git checkout development
 
 Use the following command to merge the updates from the upstream **fetch** to the target local branch. In the following scenario, we are merging updates from the upstream into the local **development** branch.
 
-syntax: `git merge <name-of-upstream-remote>/<name-of-branch>`
+*Syntax*: `git merge <name-of-upstream-remote>/<name-of-branch>`
 
 ```ts
 git merge buildmotion-angularlicious/master
@@ -68,4 +69,20 @@ After, the `git merge` command against the `upstream` called `buildmotion-angula
 
 ### Develop/Experiment in Private Repository
 
+* experiment and/or make changes in the repository code
+* keep separate commits for **commits** that are candidates for pushing as **cherry picked** items.
+
 ### PR Request/Push Cherry Picked Chagnes to the Remote Upstream (if any)
+
+Next, you would need to cherry-pick the changes that you would like to include in the pull request. Repeat the command as many times as you need to select specific commits to include in the **push** that will become a pull request branch target.
+
+*Syntax*: `git cherry-pick <commit-hash-value>`
+```ts
+git cherry-pick 07f39f7
+```
+
+*Syntax*:  `git push -u <name-of-upstream-remote> <name-of-pull-request-branch>`
+
+```ts
+ git push -u buildmotion-angularlicious pr-action-logging-updates
+ ```
