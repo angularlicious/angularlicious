@@ -1,4 +1,4 @@
-export interface IErrorHandling {
-  name: string;
-  includeDefaultErrorHandling: boolean;
+export interface IErrorHandingConfig {
+    name: string;
+    includeDefaultErrorHandling: boolean;
 }

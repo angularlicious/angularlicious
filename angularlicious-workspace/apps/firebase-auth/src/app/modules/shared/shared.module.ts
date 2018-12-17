@@ -5,8 +5,7 @@ import { AngularliciousLoggingService, AngularliciousLoggingModule, LogglyWriter
 import { ConfigurationService, ConfigurationModule } from '@angularlicious/configuration';
 import { environment } from 'apps/firebase-auth/src/environments/environment';
 import { ConsoleWriter } from 'libs/logging/src/lib/log-writers/console-writer';
-import { ErrorHandlericious } from 'libs/error-handlericious/src/lib/error-handlericious';
-import { ErrorHandlericiousModule } from '@angularlicious/error-handlericious';
+import { ErrorHandlericiousModule, ErrorHandliciousService } from '@angularlicious/error-handlericious';
 
 /**
  * The factory function to initialize the configuration service for the application.
@@ -37,7 +36,7 @@ export function initializeLogWriter(loggingService: AngularliciousLoggingService
 @NgModule({
   imports: [
     CommonModule,
-    ErrorHandlericiousModule,
+    ErrorHandlingModule,
     AngularliciousLoggingModule,
     ConfigurationModule.forRoot({filePath: `assets/config/configuration.${environment.name}.json`}),
     FirebaseModule
@@ -46,7 +45,7 @@ export function initializeLogWriter(loggingService: AngularliciousLoggingService
   providers: [
     {
       provide: ErrorHandler,
-      useClass: ErrorHandlericious
+      useClass: ErrorHandlingModule
     },
     ConfigurationService,
     AngularliciousLoggingService,
@@ -64,7 +63,12 @@ export function initializeLogWriter(loggingService: AngularliciousLoggingService
       multi: true
     },
    ConsoleWriter,
-   LogglyWriter
+   LogglyWriter,
+   {
+     provide: ErrorHandler,
+     useClass: ErrorHandliciousService,
+     deps: [ConfigurationService, AngularliciousLoggingService]
+   }
   ]
 })
 export class SharedModule {

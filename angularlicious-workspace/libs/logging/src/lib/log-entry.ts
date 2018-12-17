@@ -15,6 +15,6 @@ export class LogEntry implements ILogEntry {
         this.severity = severity;
         this.message = message;
         this.timestamp = new Date(Date.now());
-        tags = tags;
+        this.tags = tags;
     }
 }

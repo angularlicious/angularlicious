@@ -27,3 +27,10 @@ The following goals need to be achieved using a well-defined, safe, and conventi
 3. Periodically, refresh the private repository (basically update) from the public remote - so that the private repository has the latest version of the Angularlicious framework/library.
 4. Allow for the public Angularlicious Github.com repository to be developed and improved independently of any other BuildMotion web application and/or library projects. 
 5. Continue using a monorepo approach with an Angular/Nx Workspace environment.
+
+## Workflow
+
+```ts
+git fetch upstream
+git fetch buildmotion-angularlicious
+```

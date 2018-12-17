@@ -1,6 +1,12 @@
-import { IErrorHandling } from './i-error-handling-config';
+import { IErrorHandingConfig } from "./i-error-handling-config";
 
-export class ErrorHandlingConfig implements IErrorHandling {
-  name: string;
-  includeDefaultErrorHandling: boolean;
+export class ErrorHandlingConfig implements IErrorHandingConfig {
+    name: string;    
+    includeDefaultErrorHandling: boolean;
+
+    constructor(name?: string, includeDefaultErrorHandling?: boolean)
+    constructor(name: string, includeDefaultErrorHandling : boolean = true) {
+        this.name = name;
+        this.includeDefaultErrorHandling = includeDefaultErrorHandling;
+    }
 }
