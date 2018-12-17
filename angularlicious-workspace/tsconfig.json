@@ -45,6 +45,12 @@
       ],
       "@angularlicious/http-service": [
         "libs/http-service/src/index.ts"
+      ],
+      "@angularlicious/security": [
+        "libs/security/src/index.ts"
+      ],
+      "@angularlicious/markdown-editor": [
+        "libs/markdown-editor/src/index.ts"
       ]
     }
   },
