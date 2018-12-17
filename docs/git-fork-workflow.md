@@ -30,7 +30,42 @@ The following goals need to be achieved using a well-defined, safe, and conventi
 
 ## Workflow
 
+### Create a Fork
+
+Use the following instructions to create a repository that is a fork from a public repository. In our scenario, we have a private Azure DevOps repository that is configured with upstream remotes for (pull/fetch) operations.
+
+>More information at: https://help.github.com/articles/fork-a-repo/
+
+### Sync From a Remote Upstream
+We will use the `git fetch` command to get updates from the remote upstream. The `fetch` operation will bring down all updates to the local upstream branch. In order to get the changes in to the local branch/repository, you will have to perform a `merge` as described later.
+
+>More information at: https://help.github.com/articles/syncing-a-fork/
+
+Use the `git remote -v` command to view a list of all the available remotes for this repository. Typically, you would use the `git fetch upstream` command to fetch an update from the upstream remote. However, we have renamed our upstream remote - so the command is as follows:
+
 ```ts
-git fetch upstream
 git fetch buildmotion-angularlicious
 ```
+
+After fetching from the upstream, you will want to checkout the target local branch that you want to update from the upstream. We need a target to actually bring in the changes received from the `fetch` command. 
+
+```ts
+git checkout development
+```
+
+Use the following command to merge the updates from the upstream **fetch** to the target local branch. In the following scenario, we are merging updates from the upstream into the local **development** branch.
+
+syntax: `git merge <name-of-upstream-remote>/<name-of-branch>`
+
+```ts
+git merge buildmotion-angularlicious/master
+```
+
+After, the `git merge` command against the `upstream` called `buildmotion-angularlicious` will most likely require a few conflict resolutions. Depending on the frequency of fetching from the upstream, your mileage will vary. After resolving the conflicts, you will need to:
+
+1. commit changes to the specified branch
+2. push changes to the remote branch
+
+### Develop/Experiment in Private Repository
+
+### PR Request/Push Cherry Picked Chagnes to the Remote Upstream (if any)

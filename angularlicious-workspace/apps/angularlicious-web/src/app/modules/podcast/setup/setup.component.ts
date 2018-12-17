@@ -48,7 +48,8 @@ export class SetupComponent extends ComponentBase implements OnInit {
   }
 
   handleRetrieveProducts(response) {
-    this.products = response.json();
+    // this.products = response.json();
+    this.products = response;
     if (this.products && this.products.length > 0) {
       this.loggingService.log(this.componentName, Severity.Information, ``);
       this.hasProducts = true;

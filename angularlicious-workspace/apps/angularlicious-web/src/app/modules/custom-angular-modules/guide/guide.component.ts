@@ -18,8 +18,7 @@ import { ServiceResponse, ErrorResponse } from '@angularlicious/foundation';
 
 @Component({
   selector: 'app-guide',
-  templateUrl: './guide.component.html',
-  styleUrls: ['./guide.component.css']
+  templateUrl: './guide.component.html'
 })
 export class GuideComponent extends ComponentBase implements OnInit {
   _form: FormGroup;

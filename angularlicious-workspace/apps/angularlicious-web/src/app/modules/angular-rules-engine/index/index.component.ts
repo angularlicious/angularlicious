@@ -5,8 +5,7 @@ import { AngularliciousLoggingService, Severity } from '@angularlicious/logging'
 
 @Component({
   selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  templateUrl: './index.component.html'
 })
 export class AngularRulesEngineComponent extends ComponentBase
   implements OnInit {

@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  name: 'development',
+  application: 'angularlicious',
+  production: false,
+  appConfig: 'assets/config/configuration.development.json'
 };
