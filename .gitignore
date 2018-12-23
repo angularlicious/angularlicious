@@ -9,3 +9,8 @@ angularlicious-workspace/version\.js
 angularlicious-workspace/apps/reference-app/src/assets/configuration.json
 angularlicious-workspace/apps/reference-app/src/assets/config/configuration.production.json
 angularlicious-workspace/apps/reference-app/src/assets/config/configuration.development.json
+
+angularlicious-workspace/apps/angularlicious-web/
+
+angularlicious-workspace/apps/angularlicious-web-e2e/
+angularlicious-workspace/apps/angularlicious-web.zip
