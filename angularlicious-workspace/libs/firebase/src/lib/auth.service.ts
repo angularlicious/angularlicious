@@ -13,6 +13,7 @@ import { User } from './models/user.model';
 export class AuthService extends ServiceBase {
   private user: User;
   user$: Subject<User> = new ReplaySubject<User>(1);
+  isAuthenticated: boolean;
 
   constructor(
     loggingService: AngularliciousLoggingService,
@@ -46,6 +47,11 @@ export class AuthService extends ServiceBase {
   handleUserValueChanges(user: firebase.User) {
     if (user) {
       this.user = user;
+      this.isAuthenticated = true;
+      this.user$.next(this.user);
+    } else {
+      this.user = null;
+      this.isAuthenticated = false;
       this.user$.next(this.user);
     }
   }
@@ -55,11 +61,39 @@ export class AuthService extends ServiceBase {
     return this.oAuthLogin(provider);
   }
 
+  twitterLogin() {
+    const provider = new firebase.auth.TwitterAuthProvider();
+    return this.oAuthLogin(provider);
+  }
+
+  githubLogin() {
+    const provider = new firebase.auth.GithubAuthProvider();
+    return this.oAuthLogin(provider);
+  }
+
+  emailLogin() {
+    const provider = new firebase.auth.EmailAuthProvider();
+    return this.oAuthLogin(provider);
+  }
+
+  logout() {
+    //TODO: NEED TO HANDLE REDIRECT TO THE HOME/INDEX OR OTHER DEFINED PAGE;
+    return this.oAuthLogout();
+  }
+
   private oAuthLogin(provider) {
     from(this.auth.auth.signInWithPopup(provider)).subscribe(
       credential => this.handleSignInResponse(credential),
       error => this.handleError(error),
       () => this.loggingService.log(this.serviceName, Severity.Information, `Finished handling response from ${provider} provider.`)
+    );
+  }
+
+  private oAuthLogout() {
+    from(this.auth.auth.signOut()).subscribe(
+      result => this.handleSignOutResponse(result),
+      error => this.handleError(error),
+      () => this.loggingService.log(this.serviceName, Severity.Information, `Finished handling process of logging out.`)
     );
   }
 
@@ -83,10 +117,17 @@ export class AuthService extends ServiceBase {
     if (credential) {
       try {
         this.updateUser(credential.user);
+        this.isAuthenticated = true;
       } catch (error) {
         this.loggingService.log(this.serviceName, Severity.Error, `handleSignInResponse: ${error}`);
         this.handleError(error);
       }
     }
+  }
+
+  private handleSignOutResponse(result: any) {
+    this.user = null;
+    this.isAuthenticated = false;
+    this.user$.next(this.user);
   }
 }
