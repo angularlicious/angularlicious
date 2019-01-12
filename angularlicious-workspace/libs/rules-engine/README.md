@@ -1,6 +1,6 @@
 ﻿
 # Angular Rules Engine
-The Angular Rules Engine is a Javascript/Typescript based rule engine that allows applications to implement simple or sophisticated business rules as well as data validation. 
+The Angular Rules Engine is a Javascript/Typescript based rule engine that allows applications to implement simple or sophisticated business rules as well as data validation. It contains a set of common rules ready for use; as well as a framework and set of classes for you to create any custom rule you need for your application.
 
 ## Version 6.0.x Released
 This version supports all formats listed in the Angular Package Format. 
