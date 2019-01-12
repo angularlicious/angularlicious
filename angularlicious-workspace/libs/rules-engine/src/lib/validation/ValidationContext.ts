@@ -35,9 +35,6 @@ export class ValidationContext implements IValidationContext {
    * The constructor for the base validation context.
    */
   constructor() {
-    console.log(
-      'The [ValidationContext] is ready for action(s). All things are good until broken...'
-    );
   }
 
   /**
