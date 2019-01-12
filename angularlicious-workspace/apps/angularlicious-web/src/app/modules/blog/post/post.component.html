@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+  <app-landing-intro>
+    <h1 title>Blog</h1>
+  </app-landing-intro>
+  <div class="main">
+    <!-- <app-two-column-content></app-two-column-content> -->
+    <app-article>
+      <h1 title>Yet Another Angular Blog</h1>
+      <p body>
+        Bacon ipsum dolor amet chicken beef frankfurter, rump fatback bresaola meatloaf. Ham picanha turducken pancetta meatball
+        buffalo. Hamburger andouille alcatra, ground round bresaola salami cow. Filet mignon alcatra andouille shankle spare
+        ribs. Short ribs pork short loin, tongue ham hock doner filet mignon. Buffalo jowl ball tip ham hock leberkas cow
+        turkey spare ribs.
+      </p>
+      <!-- <form [formGroup]="_form" (ngSubmit)="submitForm()">
+     
+      <button class="btn btn-lime" type="submit">Submit</button>
+            <p>Form: {{_form.value | json}}</p>
+            <p>Form status: {{ _form.status }}</p>
+      </form>  -->
+      <simplemde body [markdown]="postContent" (markdownChange)="onMarkdownChange($event)"></simplemde>
+    </app-article>
+
+  </div>
+  <app-footer></app-footer>
+</div>

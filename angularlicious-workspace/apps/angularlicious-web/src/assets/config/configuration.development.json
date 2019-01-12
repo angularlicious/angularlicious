@@ -1,0 +1,21 @@
+{
+    "logging": {
+        "applicationName": "Angularlicio.us",
+        "version": "1.0",
+        "isProduction": false
+    },
+    "errorHandling": {
+        "name": "Angularlicio.us",
+        "includeDefaultErrorHandling": true
+    },
+    "loggly": {
+        "applicationName": "Angularlicio.us",
+        "version": "1.0",
+        "isProduction": false
+    },
+    "firebase": {},
+    "contentful": {
+        "spaceId": "",
+        "token": ""
+    }
+}
