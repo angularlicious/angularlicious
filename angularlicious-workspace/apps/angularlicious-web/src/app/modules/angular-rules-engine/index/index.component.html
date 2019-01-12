@@ -1,0 +1,76 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+  <app-landing-intro>
+    <h1 title>Don't Break the Rules!</h1>
+  </app-landing-intro>
+  <div class="main">
+
+    <app-article>
+      <h1 title>angular-rules-engine</h1>
+      <div body class="row">
+        <div class="col-md-8">
+          <p class="blockquote blockquote-primary">
+            The Angular Rules Engine is a Javascript/Typescript based rule engine that allows applications to contain simple or sophisticated
+            business rule implementations as well as data validation.
+          </p>
+          <a target="_blank" href="https://www.npmjs.com/package/@angularlicious/rules-engine">
+            <img src="./../../../../assets/img/GitHub-Mark-120px-plus.png" alt="GitHub.com :: angular-rules-engine">
+          </a>
+          OR
+          <a target="_blank" href="https://github.com/angularlicious/angularlicious/tree/master/angularlicious-workspace/libs/rules-engine">
+            <img src="./../../../../assets/img/n-64.png" alt="GitHub.com :: angular-rules-engine">
+          </a>
+          <div class="row">
+            &nbsp;
+          </div>
+          <h3>Why use this rule engine?</h3>
+          <p>There is no such thing as a simple application - if it was so easy everyone would be developing applications, right?
+            I cannot think of any application that didn't require some kind of validation or business rule processing.
+          </p>
+          <p>Rules and business logic is complicated enough. Use this rule engine to simplify your validation and business rule
+            requirements. You can have consistent and maintainable business logic code. Stop playing in the mud and build
+            some rules.
+          </p>
+          <h4>Rules Right Out of the Box - Ready to Go</h4>
+          <p>This is what you get right out of the box...but wait, there's more! The framework contains (2) simple base classes
+            that allow you to create simple to complex rules to satisfy the most demanding requirements.</p>
+          <ul>
+            <li>Provides a consistent way to implement business and validation rules and provide a consistent mechanism to retrieve
+              the results.</li>
+            <li>You can use the existing library of rules already implemented.
+              <ul>
+                <li>AreEqual</li>
+                <li>AreNotEqual</li>
+                <li>IsFalse</li>
+                <li>IsTrue</li>
+                <li>IsNullOrUndefined</li>
+                <li>IsNotNullOrUndefined</li>
+                <li>Max</li>
+                <li>Min</li>
+                <li>Range</li>
+                <li>StringIsNotNullEmptyRange</li>
+              </ul>
+            </li>
+            <li>You can create a reusable library of rules and use them in one or more applications.</li>
+            <li>Combine default and one or more custom rules to create a
+              <code>CompositeRule</code> - a rule that contains other rules (rule set).</li>
+            <li>Each rule has a
+              <code>Priority</code> property to execute rule sets in a specified sequence.</li>
+            <li>Take advantage of Typescript classes to quickly create
+              <code>simple</code> or
+              <code>composite</code> (nested) rules using the API that is part of the framework.</li>
+            <li>Use the
+              <code>ValidationContext</code> to simply add, execute, and retrieve rule results.</li>
+            <li>Code faster using Fluent API style syntax - be more productive.</li>
+            <li>Using the
+              <code>CompositeRule</code> base class, you can create a rule that contains other rules of either
+              <code>simple</code> or
+              <code>composite</code> types. The rule execution algorithm manages the complexity - now you can create rules and reuse rules to match
+              your business logic.</li>
+          </ul>
+        </div>
+      </div>
+    </app-article>
+  </div>
+  <app-footer></app-footer>
+</div>
