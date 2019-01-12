@@ -1,2 +1,2 @@
 # angularlicious
-Angular libraries for building enterprise applications. Does anyone really do this anymore? Yes.
+Angular libraries for building enterprise applications.
