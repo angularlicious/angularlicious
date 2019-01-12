@@ -328,7 +328,7 @@ export class IsTrue extends SimpleRule {
 ```
 
 ## Composite Rules
-A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerfule pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
+A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerful pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
 
 You are creating a rule-tree where all rules will have to evalute to valid for the container rule to be valid. This pattern allows a developer to create new custom rules and then use those rules with the default rules to orchestrate a rule implementation against a target object or value. 
 
