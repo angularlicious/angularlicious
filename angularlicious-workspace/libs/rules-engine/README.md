@@ -148,7 +148,7 @@ export class ValidatonContext implements IValidationContext {
 ```
 
 ## Adding Rules to the ValidationContext
-Using an initialzied [ValidationContext] object, you can add rules using a Fluent API syntax. The following example uses existing rules. 
+Using an initialized [ValidationContext] object, you can add rules using a Fluent API syntax. The following example uses existing rules. 
 
 A rule requires:
 
