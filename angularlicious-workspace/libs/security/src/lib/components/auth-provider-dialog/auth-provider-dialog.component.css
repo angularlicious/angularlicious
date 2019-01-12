@@ -1,0 +1,4 @@
+.cdk-overlay-backdrop {
+    opacity: .85; /* default value: .48 */
+    background-color: orange; /* default value: rgba(33, 33, 33, 1.0) */
+}

@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularliciousRulesEngineModule } from '@angularlicious/rules-engine';
 import { LoggingConfig } from '@angularlicious/configuration';
+import { AuthProviderDialogComponent } from './components/auth-provider-dialog/auth-provider-dialog.component';
 
 @NgModule({
   imports: [
@@ -26,12 +27,18 @@ import { LoggingConfig } from '@angularlicious/configuration';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  declarations: [RegisterSubscriberComponent],
+  declarations: [
+    RegisterSubscriberComponent, 
+    AuthProviderDialogComponent
+  ],
   exports: [RegisterSubscriberComponent],
   providers: [
     AngularliciousLoggingService,
     SecurityApiService, //PROVIDE INTERNAL SERVICES FOR THE MODULE; SCOPED TO THIS MODULE;
     SecurityBusinessProviderService //PROVIDE INTERNAL SERVICES FOR THE MODULE; SCOPED TO THIS MODULE;
+  ],
+  entryComponents: [
+    AuthProviderDialogComponent
   ]
 })
 export class AngularliciousSecurityModule {

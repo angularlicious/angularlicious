@@ -18,6 +18,8 @@ export class ComponentBase {
   componentName: string;
   alertNotification: AlertNotification;
   navSubscription: Subscription;
+  currentUrl: string;
+  previousUrl: string;
 
   constructor(
     componentName: string,
@@ -30,14 +32,21 @@ export class ComponentBase {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.googleAnalyticsPageview(event);
+        this.updateUrls(event);
       }
     });
-    // const routerEvent = this.router.events.filter(
-    //   event => event instanceof NavigationEnd
-    // );
-    // if (routerEvent && routerEvent instanceof NavigationEnd) {
-    //   this.googleAnalyticsPageview(routerEvent);
-    // }
+  }
+
+  /**
+   * Use to set the URLs for when navigation ends. Provides the values
+   * for the current and previous URL paths.
+   * @param event Is a [NavigationEnd] type.
+   */
+  private updateUrls(event: NavigationEnd) {
+    if (event.urlAfterRedirects) {
+      this.previousUrl = this.currentUrl;
+      this.currentUrl = event.urlAfterRedirects;
+    }
   }
 
   /**
@@ -63,34 +72,22 @@ export class ComponentBase {
     });
   }
 
+  /**
+   * Use to track a distinct/unique page view for the application.
+   * @param event 
+   */
   private googleAnalyticsPageview(event: NavigationEnd) {
     if (event && event.urlAfterRedirects) {
-      this.loggingService.log(
-        this.componentName,
-        Severity.Information,
-        `Preparing to set [Google Analytics] page view for [${
-          event.urlAfterRedirects
-        }].`
-      );
-      // (<any>window).ga('set', 'page', event.urlAfterRedirects);
-      // (<any>window).ga('send', 'pageview');
-      // ga('create', 'UA-110194344-1', 'auto', this.componentName);
-      // ga(`${this.componentName}.send`, 'pageview');
-
+      this.loggingService.log(this.componentName, Severity.Information, `Preparing to set [Google Analytics] page view for [${event.urlAfterRedirects}].`);
       // https://blog.thecodecampus.de/angular-2-google-analytics-google-tag-manager/
       // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
       const GA_TRACKING_ID = 'UA-110194344-1';
-      // gtag('config', 'GA_TRACKING_ID', {<pageview_parameters>});
       (<any>window).ga('config', GA_TRACKING_ID, {
         page_title: this.componentName,
         page_path: event.urlAfterRedirects
       });
     } else {
-      this.loggingService.log(
-        this.componentName,
-        Severity.Warning,
-        `Failed to set [Google Analytics] page view.`
-      );
+      this.loggingService.log(this.componentName, Severity.Warning, `Failed to set [Google Analytics] page view.`);
     }
   }
 
@@ -99,11 +96,7 @@ export class ComponentBase {
    * @param message The message to display to the user.
    */
   createErrorResponse(message: string): ErrorResponse {
-    this.loggingService.log(
-      this.componentName,
-      Severity.Information,
-      `Preparing to create error response for component.`
-    );
+    this.loggingService.log(this.componentName, Severity.Information, `Preparing to create error response for component.`);
     const errorResponse: ErrorResponse = new ErrorResponse();
     errorResponse.Message = message;
     return errorResponse;
@@ -123,11 +116,7 @@ export class ComponentBase {
     errorResponse: ErrorResponse,
     serviceContext?: ServiceContext
   ) {
-    this.loggingService.log(
-      this.componentName,
-      Severity.Information,
-      `Preparing to handle service errors for component.`
-    );
+    this.loggingService.log(this.componentName, Severity.Information, `Preparing to handle service errors for component.`);
     if (serviceContext && serviceContext.hasErrors()) {
       this.loggingService.log(
         this.componentName,
@@ -135,31 +124,13 @@ export class ComponentBase {
         `Retrieving error messages from the ServiceContext/ValidationContext;`
       );
       const messages = this.retrieveServiceContextErrorMessages(serviceContext);
-      this.alertNotification = new AlertNotification(
-        'Errors',
-        errorResponse.Message,
-        messages,
-        AlertTypes.Warning
-      );
+      this.alertNotification = new AlertNotification('Errors', errorResponse.Message, messages, AlertTypes.Warning);
     } else {
       if (errorResponse && errorResponse.Message) {
-        this.loggingService.log(
-          this.componentName,
-          Severity.Information,
-          `Retrieving error messages from the [ErrorResponse].`
-        );
+        this.loggingService.log(this.componentName, Severity.Information, `Retrieving error messages from the [ErrorResponse].`);
         const errors = this.retrieveResponseErrorMessages(errorResponse);
-        this.alertNotification = new AlertNotification(
-          'Error',
-          errorResponse.Message,
-          errors,
-          AlertTypes.Warning
-        );
-        this.loggingService.log(
-          this.componentName,
-          Severity.Error,
-          `Error: ${errorResponse.Message}`
-        );
+        this.alertNotification = new AlertNotification('Error', errorResponse.Message, errors, AlertTypes.Warning);
+        this.loggingService.log(this.componentName, Severity.Error, `Error: ${errorResponse.Message}`);
       }
     }
   }
@@ -212,13 +183,7 @@ export class ComponentBase {
     try {
       this.router.navigate([routeName]);
     } catch (error) {
-      this.loggingService.log(
-        this.componentName,
-        Severity.Error,
-        `Error while attempting to navigate to [${routeName}] route from ${
-          this.componentName
-        }. Error: ${error.toString()}`
-      );
+      this.loggingService.log(this.componentName, Severity.Error, `Error while attempting to navigate to [${routeName}] route from ${this.componentName}. Error: ${error.toString()}`);
     }
   }
 
@@ -230,11 +195,7 @@ export class ComponentBase {
   }
 
   finishRequest(message: string): void {
-    this.loggingService.log(
-      this.componentName,
-      Severity.Information,
-      `${this.componentName}: ${message}`
-    );
+    this.loggingService.log(this.componentName, Severity.Information, `${this.componentName}: ${message}`);
   }
 
   protected showAlertMessage(message: string): void {
