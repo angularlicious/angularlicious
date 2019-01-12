@@ -328,9 +328,9 @@ export class IsTrue extends SimpleRule {
 ```
 
 ## Composite Rules
-A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerfule pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
+A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerful pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
 
-You are creating a rule-tree where all rules will have to evalute to valid for the container rule to be valid. This pattern allows a developer to create new custom rules and then use those rules with the default rules to orchestrate a rule implementation against a target object or value. 
+You are creating a rule-tree where all rules will have to evaluate to valid for the container rule to be valid. This pattern allows a developer to create new custom rules and then use those rules with the default rules to orchestrate a rule implementation against a target object or value. 
 
 The `CompositeRule` extends from `RulePolicy` which has the responsible of calling `render()` on each rule. In case of a composite rule, this method will iterate through the list of rules and call the the `execute()` method of each rule. Then the results are processed to determine if *any* of the rules failed. 
 
@@ -370,7 +370,7 @@ export class CompositeRule extends RulePolicy {
 ```
 
 The following shows an implementation of a composite rule. Basically, this rule is using (2) default rules, both of which are also
-composite rules. All rules within each composite must evalute to true for this rule to be valid. 
+composite rules. All rules within each composite must evaluate to true for this rule to be valid. 
 
 ```js
 import dCompareResult = require('typescript-dotnet-commonjs/System/CompareResult');
@@ -386,7 +386,7 @@ import {Range} from './index';
 
 /**
  * Use this rule to validate a string target. A valid string is not null or undefined; and it
- * is within the specified minimum and maxiumum length. 
+ * is within the specified minimum and maximum length. 
  */
 export class StringIsNotNullEmptyRange extends CompositeRule {
     maxLength: number;
