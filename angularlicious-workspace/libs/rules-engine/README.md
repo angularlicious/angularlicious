@@ -37,7 +37,7 @@ Two core principles of good software design are [Separation of Concerns (SoC)](h
 
 A business rule engine allows the application to have a good Separation of Concerns (SOR). The Angular Rules Engine allows you to:
 
-+ Quicky start using out-of-the-box rules that are already implemented.
++ Quickly start using out-of-the-box rules that are already implemented.
 + Create custom rules that are either simple or composite.
 + Create rules that can be reused throughout the application. Code reuse eliminates copy/paste of common rules.
 + Use a single ValidationContext to add rules, execute rules, and evaluate the rule results. 
